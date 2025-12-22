@@ -15,7 +15,7 @@
 
 * **Technologies**: HTML, CSS, PHP
 * **Design**: Modern, minimalist, responsive, focusing on simplicity and clarity of information.
-* **Hosting**: [Insert Hosting Provider if applicable]
+* **Hosting**: 
 
 ### Usage
 

@@ -1,0 +1,45 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    max-width: 140rem;
+    min-height: 100vh;
+    margin:0 auto;
+    padding: 1rem;
+    font-size: 1.4rem;
+    color: #333;
+    font-family: "Manjari",serif;
+    letter-spacing: 0.1rem;
+    font-weight: 500;
+
+    display: flex;
+    flex-direction: column;
+}
+main{
+    flex:1;
+}
+.flex{
+    display: flex;
+}
+.grid{
+    display: grid;
+}
+.grid-3-cols{
+    grid-template-columns: repeat(3,1fr);
+}
+.heading-primary{
+
+}
+.heading-secondary{
+
+}
+.heading-tertiary{
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    font-weight: 800;
+}
