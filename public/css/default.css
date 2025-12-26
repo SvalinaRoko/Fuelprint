@@ -7,18 +7,13 @@ html{
     font-size: 62.5%;
 }
 body{
-    max-width: 140rem;
     min-height: 100vh;
-    margin:0 auto;
-    padding: 1rem;
     font-size: 1.4rem;
     color: #333;
-    font-family: "Manjari",serif;
+    font-family: "Bricolage Grotesque",sans-serif;
     letter-spacing: 0.1rem;
     font-weight: 500;
-
-    display: flex;
-    flex-direction: column;
+    overflow-x: hidden;
 }
 main{
     flex:1;
@@ -26,20 +21,51 @@ main{
 .flex{
     display: flex;
 }
+.dir-col{
+    flex-direction: column;
+}
 .grid{
     display: grid;
 }
+.grid-2-cols{
+    grid-template-columns: repeat(2,1fr);
+}
 .grid-3-cols{
     grid-template-columns: repeat(3,1fr);
+}
+.grid-4-cols{
+    grid-template-columns: repeat(4,1fr);
+}
+.grid-4-rows{
+    grid-template-rows:repeat(4,1fr)
 }
 .heading-primary{
 
 }
 .heading-secondary{
-
+    text-transform: uppercase;
+    font-weight: 800;
+    line-height: 40px;
+    font-size: 5.2rem;
 }
 .heading-tertiary{
     font-size: 1.6rem;
     text-transform: uppercase;
-    font-weight: 800;
+    font-weight:600;
+}
+.tiny-text{
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+    font-weight: 600;
+    color: rgba(51, 51, 51, 0.5);
+}
+.error-msg{
+    color: red;
+    font-size: 2.4rem;
+    text-transform: uppercase;
+}
+
+.center{
+    margin: 0 auto;
 }
