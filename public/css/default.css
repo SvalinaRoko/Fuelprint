@@ -14,6 +14,9 @@ body{
     letter-spacing: 0.1rem;
     font-weight: 500;
     overflow-x: hidden;
+    /* background-color: #546de5;
+    background-color: #0F676F;
+    background-color: #0984e3; */
 }
 main{
     flex:1;
@@ -43,15 +46,16 @@ main{
 
 }
 .heading-secondary{
-    text-transform: uppercase;
-    font-weight: 800;
-    line-height: 40px;
-    font-size: 5.2rem;
+    line-height: 6.5rem;
+    letter-spacing: 0.5rem;
+    font-weight: 400;
+    font-size: 7.4rem;
 }
 .heading-tertiary{
-    font-size: 1.6rem;
-    text-transform: uppercase;
-    font-weight:600;
+    font-weight: 600;
+    font-size: 3rem;
+    text-wrap: nowrap;
+    width: fit-content;
 }
 .tiny-text{
     text-transform: uppercase;
