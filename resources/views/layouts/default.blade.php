@@ -6,118 +6,33 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap" rel="stylesheet">
-    <title>@yield ('title', 'Fuel Watch - easy track')</title>
+    <title>@yield ('title', 'Fuelprint')</title>
     @stack('styles')
 </head>
-<body class="flex dir-col">
+<body>
     <header>
+        <!-- <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" width="600" height="100" viewBox="0 0 400 100">
+            <defs>
+                <style>
+                    .st0{fill:#0984e3}
+                </style>
+            </defs>
+            <path d="M44 44.3c-.6.3 0 .9.2 1.2l.1 2 .4 2c.3.3.7 0 1 .1l8.2.8q1.2-.2 1-1.2c0-1-1-5.2-1.4-6L53 43l-2.4.2q-3.4.4-6.6 1.2M50 68q.9 2.2 1.6 4.5.1.4.9.4c2.4-.8 5.3-1 7.7-1.9q1-.2.5-1L59 64.7l-9 2.8q-.2 0 0 .4m2.6 7.2q-.3.4-.2.9c.1.6.6 2.2 1 2.6l.5.3q3.9-.4 7.8-1.3.9-.3 1-1a10 10 0 0 0-.7-3.2l-.3-.1zM54 82c.5.9.2 2.2 1.6 2.2L57 84c2.3.3 4.4 1 6.6 1q.8-1.7.4-3.6c-.1-.7-.1-1.4-1-1.3l-8.1 1q-.6.3-.8.8m-5.5-48.4H48c-1.4.3-4.5 1.8-5.8 2.5q-.8.3-.5 1c.3.7 1 3 1.6 3.5q.6.4 1.4.3l2.6-1c1.2-.4 3-.5 4-.9l1-.5c-.6-.7-.3-1.5-.5-2.3-.1-.7-.4-2.3-.7-3q-.7-1-1.9-.2zM39 74l-.3-.8c-.2-.6-.4-2.3-1-2.4H37q-1.3 0-2.5.4l-.7.5-3 .7-.6.2.3 1.2-.2 1.3.4 2c0 .7-.2 1.5.4 2l8.4-3zM25.4 47.6c-.7-.7-2.1-2.3-2.9-2.9q-.4-.3-1 .1c-2.4 1.3-4.7 3.3-7.2 4.6-.7.4.1 1 .4 1.5s3.4 4.1 3.7 4.1l.3-.2 7.1-6.5zm6.4 6L28 50.3l-6.8 7.4 4.8 4.6 6-8.2zm9.5 27.6-.5-1.6-.5-.5c-.4-.3-1.7.4-2.2.5l-4 1c-.7.3-2.5 1-2.5 1.8.4.9.4 2.2.8 3q.2.6.7.4c1.6-.5 3.6-1.5 5.2-2.2 1.1-.4 3.3-.7 3-2.5Zm.8 3.6c-.5-.2-.6.2-1 .4l-7.2 3v.9l1.6 3.5s.2.4.4.4l7.5-5.9c-.3-.5-.8-2-1.3-2.3m20.8 2.3c-2-.5-4.5-.4-6.6-.7q-.7-.4-1.5-.5c-1.1.3-1 1.2-1.5 2-1 1.3-4.3 2.5-6 2.3-1-.1-1.5-1.5-3-.9l-5 4.4c-.4.3-1.6 1.1-1.6 1.5v.2l1.4 1.5c.7.5 5.3 2 6.3 2 1.8.4 5.6 0 7.3-.6 1.4-.4 3.5-1.3 4.7-2a13 13 0 0 0 6.2-8.6q-.1-.5-.7-.6M12.3 36.4c.9-.3 2.8-1.1 3.4-1.6 1-.7.1-1.7-.1-2.5l-.8-2.3-.2-.3c-.2-.1-2.3.4-2.8.6q-1.7.4-3.5.6c-.6 0-2.1 0-2.5.5l-.2.9c.1 1 .8 4 1.3 4.8.5.9 1.7 0 2.4-.1zm7.9 5.8c.2-.4-.7-1.2-1-1.7l-1.6-3-8.9 3.4 3 6.2q3.6-1.5 6.7-3.6c.3-.3 1.7-1.1 1.8-1.4ZM30 16.8c1 .7 1.6 1.9 2.4 2.6 1 1 1.2-.7 1.6-1l.7-.5 1.5-1.7 2.4-2.5q0-.5-.4-1c-.6-.8-2.2-2.3-3-3q-.6-.6-1.1-.3l-.4.5-4.7 5.9c0 .7.6.7 1 1m6.3 3.8L35 22.2c-.4.7.3 1 .7 1.5s1 2.8 1.6 3l.8-.2c.4-.2.2-.8.5-1l1.7-.9 2-1.5c1-.5 2.8-1.3 2.2-2.4S43 17.8 42.3 17q-.5-.6-1.2-.2l-1.5 1-.1.6-1.1.4a7 7 0 0 0-2 1.8ZM13 18.3q.5-.4.5-1c.8-2.2 1.2-3.6 3.5-4.8 3.3-1.7 6.3-.9 9.2 1.3q.6 0 1-.4l4.7-6.6c0-.4-.6-.9-.9-1.1a21 21 0 0 0-18.5-4.1l-1.7.7c-1.7 1-5 6-5.8 7.8a21 21 0 0 0-1.3 5.2c0 .6-.3 1.9-.2 2.4q0 .4.4.7zm-5.1 9.1 3-.7c.7-.2 1.8-.1 2.5-.3.9-.3.4-.8.2-1.7l-.3-1.9v-1.3c0-.4-1-.3-1.3-.3-1.3 0-6.4-.1-7.4.2l-.7.5v.3c.4 1.5.3 3.3.6 4.8l.5 1c.3 0 1.5-.5 1.8-.7zm36.2-1.5-1.2.4c-.5.2-1.2.9-1.7 1.2L39 29.4l.1.4 1.3 3q.1.5.6.6l.8-.2.9-.7.7-.1c1.8-.6 3.5-1.8 5.2-2.4.8-.4.4-1.4.2-2L47 25q-.4-.6-1.2-.6c-.8.2-1.2 1.2-1.8 1.5ZM50 73.6l-.4-.4-.7-2.2-.5-.5-.1.1-.8 1.2q-.8.3-1.1 1c.4 1 .7 3.7 2.2 2.6 0-.2 1.3-1.6 1.3-1.8" class="st0"/>
+            <path d="m18.8 17-1.3-1.3-.6.2c-.7.6-1.2 2.3-1.3 3 0 1.1 0 3.4.3 4.3q.3.6.7.3c.6-.3.9-2.5 1.1-3.2l1-1.6q.6-.7.1-1.6ZM46 82q.5 0 .4-.5c0-.3-.6-1.3-.8-1.5l-2-1-.5.2c-.7.4-.3 1.7.1 2.2s2.2.8 2.9.6m-1.7-5.3c.9-.2.5-.3.3-.7-.3-1-.2-2.3-1-2.8l-2.1-.8-.5.2c-1 .7 0 2.7.7 3.4.5.5 1.9 1 2.6.7M47.6 88c.6 0 .5-.7.3-1.1l-.7-1.3q-.2-.5-.7-.6c-.4-.2-1.3-.4-1.6-.2-.7.6.3 1.8.7 2.2.3.3 1.6 1.2 2 1M25.4 16q-2.1-1.9-5-2.2-.5 0-.5.7l1 2.4c2-.4 3.9.5 5.8.8l.2-.2v-.4c-.3-.4-1.2-1-1.6-1.2Zm23.7 65c.5.1 2-1.3 2.1-1.7l-.6-1.7q-.4-.2-.8.1a5 5 0 0 0-1.4 1.5c0 .4.3 1.8.7 1.9m3.2 4.6-.2-2q0-.6-.3-1.3h-.3c-.4.3-1.3 2-1.3 2.4 0 .5.5 2 .7 2.2.7.7 1.3-.8 1.4-1.3M74.6 72V26.2q.1-1.5 1.6-1.6h6.2q1.5.1 1.6 1.6v45.6q-.1 1.5-1.6 1.6h-6.2q-1.5-.1-1.6-1.6M78.9 31v-4.8q.1-1.5 1.6-1.6h28q1.5.1 1.6 1.6V31q-.1 1.5-1.6 1.6h-28q-1.5-.1-1.6-1.6m0 21.6v-4.5q.1-1.5 1.6-1.6h25.1q1.5.1 1.6 1.6v4.5q-.1 1.6-1.6 1.7h-25q-1.6-.2-1.7-1.7m50.6 22q-6.7 0-10-4.6-3.4-4.6-3.4-13.8V36.3q.1-1.4 1.6-1.6h6.1q1.6.2 1.7 1.7V55q0 6 1.7 8.7 1.8 3 5.5 3 2.3 0 3.8-1.1 1.6-1 2.8-3 1.3-2 2-4.6c.6-2.6.6-3.6.7-5.7v-16c0-.8.8-1.6 1.7-1.6h6.1q1.6.2 1.7 1.7v21.1l-.1 14.3q-.1 1.6-1.6 1.7h-4.5q-1.5-.2-1.6-1.7l.1-10.5h-1.2q-1.1 4.5-2.8 7.5-1.8 3-4.3 4.3-2.5 1.5-6 1.4m49.9.1q-4.8 0-8.4-1.4t-6.2-4-3.8-6q-1.2-3.7-1.2-8.3c0-4.6.4-5.9 1.2-8.5q1.3-3.8 3.7-6.7 2.4-2.8 6-4.3 3.5-1.6 8-1.6c4.4 0 5.4.5 7.6 1.4q3.4 1.4 5.6 4.2a19 19 0 0 1 3.3 7q1 3.5 1 7.9-.2 1.5-1.7 1.6l-27 .2q-1.6-.2-1.7-1.7v-2.1q.2-1.6 1.7-1.6l20.8-.2c.8 0 1.2 1 .6 1.6-.6.5-1.5 0-1.5-.7q0-2.9-.7-4.8a8 8 0 0 0-8-5.3q-3 0-5.2 1.6-2.3 1.5-3.5 4.5t-1.3 7.3q0 6.4 2.8 9.7a10 10 0 0 0 7.9 3.1q2.2 0 3.7-.5a8 8 0 0 0 4.3-3.7l.5-1q.5-1.2 1.8-1l5 1q1.6.6 1.3 2.2-.6 1.7-1.5 3.1-1.3 2.1-3.4 3.8-2 1.5-5 2.4t-6.7.8m25.1-2.6V22.5q.1-1.6 1.6-1.6h6q1.6.1 1.7 1.6v49.3q-.2 1.5-1.7 1.6h-6q-1.5-.1-1.6-1.6m20.7 14a1 1 0 0 1-1-.8V36.4q.2-1.5 1.7-1.6h4.6q1.5.2 1.6 1.7v8.8l1.1.1q.9-3.7 2.5-6.3t4.2-3.9a13 13 0 0 1 6.1-1.4q5.3 0 9 2.6 3.6 2.7 5.4 7.3 2 4.5 1.9 10.7c-.1 6.2-.6 7.3-1.7 10.3q-1.8 4.5-5.2 7.2a14 14 0 0 1-8.7 2.7q-3.8 0-6.4-1.5t-4.2-4.2-2.7-6H232a40 40 0 0 1 1.3 8.3l.2 3.9V85q0 .8-.9.8zM243.6 67q2.9 0 4.9-1.7 2-1.5 3-4.4 1.2-2.8 1.1-6.6c0-3.8-.3-4.8-1-6.7a10 10 0 0 0-3.3-4.3q-2-1.5-4.9-1.6-2.4 0-4.3 1.1a10 10 0 0 0-3 3q-1.3 1.7-1.9 3.8t-.6 4V55a14 14 0 0 0 3.6 9q1.2 1.4 2.8 2.1t3.6.8Zm28.7 6.6q-1.5-.2-1.6-1.7V36.4q.2-1.5 1.7-1.6h4.6q1.6.2 1.7 1.7l-.2 11.7h1.3q.5-4.8 2-8 1.6-3 4-4.7 2.7-1.6 6.2-1.6l2 .2q1.4.2 1.5 1.6l-.3 6.4c0 1-1 1.8-2 1.6l-.5-.1-2.2-.3q-3 0-5 1.5-2.1 1.5-3.5 4.2-1.2 2.8-1.9 6.3V72q-.1 1.6-1.6 1.7zm34.4-44.9q-3 0-4.4-1.2t-1.5-3.4q0-2.4 1.6-3.6 1.5-1.2 4.3-1.2 3 0 4.4 1.2c1.4 1.2 1.5 2 1.5 3.5s-.5 2.7-1.5 3.5-2.5 1.2-4.4 1.2M302 72V36.4q.1-1.5 1.6-1.6h6q1.6.1 1.7 1.6V72q-.1 1.5-1.6 1.6h-6.1q-1.6-.1-1.6-1.6m21.4 1.6q-1.5-.2-1.6-1.7V36.4q.2-1.5 1.7-1.6h4.6q1.5.2 1.6 1.7l-.2 10.2h1.4q.9-4.3 2.7-7.2c1.8-3 2.7-3.3 4.5-4.3q2.7-1.3 6.2-1.3 6.8 0 10.2 4.7Q358 43.2 358 53v19c0 .8-.8 1.6-1.7 1.6h-6.2q-1.5-.2-1.6-1.7V54q0-6.3-1.9-9.2-1.9-3-5.6-3-3.2 0-5.3 2t-3.3 5.2q-1 3.3-1.2 7v16q-.2 1.6-1.7 1.7zm57.8.8q-6 0-9-3.3t-3-10.3V44q-.1-1.5-1.6-1.6h-2.4q-1.5-.2-1.6-1.7v-4.1q.3-1.5 1.7-1.6h2.3q2 0 3-.7 1.2-.6 1.3-2.4l.7-4.2q.1-1.3 1.6-1.4h2.5q1.5.2 1.6 1.7v5.3q.1 1.5 1.6 1.6h6.8q1.6.1 1.7 1.6V41q-.2 1.5-1.7 1.6H380q-1.5.1-1.6 1.6v16.3q0 2.8 1.3 4 1.2 1.2 3.8 1.2l3.2-.4c1-.3 2 .5 2 1.5V72q0 1.1-1.1 1.5a22 22 0 0 1-6.3 1ZM27.8 18.6c-1.4 3.6-1.8 6.8.9 10.2 3.5 4.5 11.8 6 13.3 12.4q1 4.7-2 8c-5.7 6.2-15.5.6-15.7-8 0-2 .7-4.4-1.2-5.9l-.7-.5q1.2-.6 2.4.2c2.6 1.6 2.3 5 4.6 6.6s4.2-.1 3.1-2.7c-.8-2-3-2.5-4.4-3.7-4.8-3.8-4-11.2-1.4-15.8.1-.3 1.2-2 1.4-2.1l.2.1z" class="st0"/>
+        </svg> -->
+        <nav>
+            <ul>
+                @yield('nav-links')
+            </ul>
+        </nav>
     </header>
     <main>
-        <section class="steps-section">
-            <div class="steps-container center">
-                <div class="heading-box-steps flex center">
-                    <div>
-                        <h2 class="heading-secondary">How to get started</h2>
-                        <small class="tiny-text">Step by step</small>
-                    </div>
-                </div>
-                <div class="steps-box">
-                    <div class="steps one">
-                        <div class="step flex center">
-                            <div class="step-nbr">
-                                <span>1.</span>
-                            </div>
-                            <p class="step-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum deserunt nostrum architecto quisquam, distinctio obcaecati facilis pariatur expedita tenetur consectetur.</p>
-                        </div>
-                    </div>
-                    <div class="steps two">
-                        <div class="step flex center">
-                            <p class="step-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto dicta molestiae labore rerum ratione aliquam quo velit excepturi natus ipsa.</p>
-                            <div class="step-nbr">
-                                <span>2.</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="steps three">
-                        <div class="step flex center">
-                            <div class="step-nbr">
-                                <span>3.</span>
-                            </div>
-                            <p class="step-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto dicta molestiae labore rerum ratione aliquam quo velit excepturi natus ipsa.</p>
-                        </div>
-                    </div>
-                    <div class="steps four">
-                        <div class="step flex center">
-                            <p class="step-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto dicta molestiae labore rerum ratione aliquam quo velit excepturi natus ipsa.</p>
-                            <div class="step-nbr">
-                                <span>4.</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="video-section">
-            <div class="video-container center">
-                <div class="video-box">
-                    <video class="video" width="1400" controls>
-                        <source src="{{asset('videos/tutorial.mp4')}}" type="video/mp4">
-                        <source src="{{asset('videos/tutorial.ogg')}}" type="video/ogg">
-                        <p class="error-msg">Your browser dose not support HTML video.</p>
-                    </video>
-                </div>
-            </div>
+        <section class="values">
+            @yield('values')
         </section>
     </main>
-    <footer class="footer center">
-        <section class="section-footer grid grid-3-cols">
-            <div class="contact-container">
-                <div class="heading-box-footer">
-                    <h3 class="heading-tertiary">Contact us</h3>
-                </div>
-                <div class="number-box flex">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 256 256"><path d="m222.37 158.46-47.11-21.11-.13-.06a16 16 0 0 0-15.17 1.4 8 8 0 0 0-.75.56L134.87 160c-15.42-7.49-31.34-23.29-38.83-38.51l20.78-24.71c.2-.25.39-.5.57-.77a16 16 0 0 0 1.32-15.06v-.12L97.54 33.64a16 16 0 0 0-16.62-9.52A56.26 56.26 0 0 0 32 80c0 79.4 64.6 144 144 144a56.26 56.26 0 0 0 55.88-48.92 16 16 0 0 0-9.51-16.62M176 208A128.14 128.14 0 0 1 48 80a40.2 40.2 0 0 1 34.87-40 .6.6 0 0 0 0 .12l21 47-20.67 24.74a6 6 0 0 0-.57.77 16 16 0 0 0-1 15.7c9.06 18.53 27.73 37.06 46.46 46.11a16 16 0 0 0 15.75-1.14 8 8 0 0 0 .74-.56L168.89 152l47 21.05h.11A40.21 40.21 0 0 1 176 208"/></svg>
-                    <span class='number'>+385 95 555 5555</span>
-                </div>
-                <div class="email-box flex">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 256 256"><path d="M224 48H32a8 8 0 0 0-8 8v136a16 16 0 0 0 16 16h176a16 16 0 0 0 16-16V56a8 8 0 0 0-8-8m-96 85.15L52.57 64h150.86ZM98.71 128 40 181.81V74.19Zm11.84 10.85 12 11.05a8 8 0 0 0 10.82 0l12-11.05 58 53.15H52.57ZM157.29 128 216 74.18v107.64Z"/></svg>
-                    <p class="email">fuelwatch.support@gmail.com</p>
-                </div>
-                <div class="social-box flex">
-                    <p>Follow us &mdash;</p>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 256 256"><path d="m214.75 211.71-62.6-98.38 61.77-67.95a8 8 0 0 0-11.84-10.76l-58.84 64.72-40.49-63.63A8 8 0 0 0 96 32H48a8 8 0 0 0-6.75 12.3l62.6 98.37-61.77 68a8 8 0 1 0 11.84 10.76l58.84-64.72 40.49 63.63A8 8 0 0 0 160 224h48a8 8 0 0 0 6.75-12.29M164.39 208 62.57 48h29l101.86 160Z"/></svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 256 256"><path d="M128 24a104 104 0 1 0 104 104A104.11 104.11 0 0 0 128 24m8 191.63V152h24a8 8 0 0 0 0-16h-24v-24a16 16 0 0 1 16-16h16a8 8 0 0 0 0-16h-16a32 32 0 0 0-32 32v24H96a8 8 0 0 0 0 16h24v63.63a88 88 0 1 1 16 0"/></svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 256 256"><path d="M224 72a48.05 48.05 0 0 1-48-48 8 8 0 0 0-8-8h-40a8 8 0 0 0-8 8v132a20 20 0 1 1-28.57-18.08 8 8 0 0 0 4.57-7.23V88a8 8 0 0 0-9.4-7.88C50.91 86.48 24 119.1 24 156a76 76 0 0 0 152 0v-39.71A103.25 103.25 0 0 0 224 128a8 8 0 0 0 8-8V80a8 8 0 0 0-8-8m-8 39.64a87.2 87.2 0 0 1-43.33-16.15A8 8 0 0 0 160 102v54a60 60 0 0 1-120 0c0-25.9 16.64-49.13 40-57.6v27.67A36 36 0 1 0 136 156V32h24.5A64.14 64.14 0 0 0 216 87.5Z"/></svg>
-                </div>
-            </div>
-            <div class="copyright-text">
-                <small>Fuel Watch &copy; {{ date ('Y')}} &mdash; All rights reserved</small>
-            </div>
-            <div class="info-container flex">
-                <div>
-                    <div class="heading-box-footer">
-                        <h3 class="heading-tertiary">Info</h3>
-                    </div>
-                    <div class="info-box">
-                        <ul class="info-list">
-                            <li class="info"><a href="#">FaQ</a></li>
-                            <li class="info"><a href="#">About us</a></li>
-                            <li class="info"><a href="#">Sitemap</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div>
-                    <div class="heading-box-footer">
-                        <h3 class="heading-tertiary">Legal info</h3>
-                    </div>
-                    <div class="info-box">
-                        <ul class="info-list">
-                            <li class="info"><a href="#">Privacy policy</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <footer class="footer">
+        @yield('footer')
     </footer>
 </body>
 </html>

@@ -1,0 +1,113 @@
+/* VALUES */
+.values-section {
+    max-width: 100vw;
+    min-height: auto;
+}
+.values-container{
+    max-width: 180rem;
+    margin:20rem auto;
+
+}
+.section-heading{
+    padding: 0 2rem;
+    justify-content: center;
+    margin-bottom:10rem ;
+}
+.section-title{
+    width: fit-content;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    background-color: rgba(73, 53, 220, 0.5);
+    gap: 0.7rem;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+.check-mark{
+    fill: #fff;
+}
+.title{
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    color: #fff;
+
+}
+.values{
+    justify-items: center;
+    align-items: center;
+    column-gap: 2rem;
+    padding: 1rem;
+}
+.about-value{
+    max-width: 50rem;
+    margin-bottom: 4rem;
+}
+.about-value h3{
+    margin-bottom: 1rem;
+}
+.icon{
+    justify-content: center;
+    align-items: center;
+    max-width: 5.2rem;
+    min-height: 5.2rem;
+    background-color: rgba(9, 133, 227, 0.2);
+    padding: 0.5rem;
+    border-radius: 0.7rem;
+    margin-bottom: 2rem;
+}
+.values-icon{
+    max-width: 3.3rem;
+    min-height: auto;
+}
+.value-text{
+    text-wrap: wrap;
+    width: 100%;
+}
+.placeholder{    
+    width: 50rem;
+    min-height: 50rem;
+    border-radius: 2rem;
+    background-color: #333;
+}
+/* FOOTER */
+.footer-section{
+    max-width: 100vw;
+    min-height: auto;
+    background:linear-gradient(#fff,rgba(9, 133, 227, 0.60));
+}
+.footer-container{
+    padding: 10rem 2rem 0 2rem;
+    max-width: 70rem;
+    margin: 20rem auto 10rem auto;
+    gap: 5rem;
+
+    justify-content: center;
+    align-items: center;
+}
+.page-links{
+    width: 100%;
+}
+.links-list{
+    list-style: none;
+    justify-content: space-between;
+}
+.social-links{
+    width: 30%;
+}
+.social{
+    justify-content: space-between;
+}
+.footer-link{
+    color: #333;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 1.6rem;
+}
+.copyright{
+    width: 100%;
+    text-align: center;
+}
+.copyright small{
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    text-transform: uppercase;
+}
