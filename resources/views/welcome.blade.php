@@ -6,19 +6,124 @@
 <link href="{{asset('css/default.css')}}" rel="stylesheet">
 <link href="{{asset('css/welcome.css')}}" rel="stylesheet">
 @endpush
+@section('nav-left-links')
+<li><a href="#" class="nav-link" id="" aria-label="">How it works</a></li>
+<li><a href="#" class="nav-link" id="" aria-label="">Values</a></li>
+<li><a href="#" class="nav-link" id="" aria-label="">FaQ</a></li>
+@endsection
+@section('nav-right-links')
+<li><a href="#" class="nav-link" id="" aria-label="">Help</a></li>
+<li><a href="#" class="nav-link" id="" aria-label="">Login</a></li>
+<li><a href="#" class="nav-link" id="" aria-label="">Sign in</a></li>
+@endsection
+@section('functionality')
+<div class="func-container grid grid-2-cols">
+    <div class="func-info-container">
+        <div class="section-heading flex ">
+            <div class="values-heading-box">
+                <div class="section-title flex">
+                    <div class="icon-box" role="img" aria-label="Puzzle icon for values section">
+                        <svg class="title-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                            <path d="m220 159-7-1a20 20 0 1 1 0-36 8 8 0 0 0 11-7V72a16 16 0 0 0-16-16h-36v-4a36 36 0 0 0-11-26 36 36 0 0 0-61 23v7H64a16 16 0 0 0-16 16v32h-4a36 36 0 0 0-26 11 36 36 0 0 0-10 27 36 36 0 0 0 33 34h7v32a16 16 0 0 0 16 16h144a16 16 0 0 0 16-16v-43zm-12 49H64v-43a8 8 0 0 0-11-7 20 20 0 1 1 0-36 8 8 0 0 0 11-7V72h47a8 8 0 0 0 7-11 20 20 0 1 1 36 0 8 8 0 0 0 7 11h47v32h-7a36 36 0 0 0 3 72h4Z"/>
+                        </svg>
+                    </div>
+                    <span class="title">How it works</span>
+                </div>
+                <div class="heading">
+                    <h2 class="heading-secondary">Here is how <br>Fuelprint works</h2>
+                </div>
+                <div class="hint">
+                    <small class="hint-text">Hint: it's unbelievably easy</small>
+                </div>
+            </div>
+        </div>
+        <div class="functions flex dir-col">
+            <!-- FIRST -->
+             <div class="funcion flex">
+                <div class="function-name flex">
+                    <div class="func-icon-box flex" role="img" aria-label="Two arrows pointing in opposite directions separated by a straight line icon">
+                        <svg class="func-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                            <path d="M136 40v176a8 8 0 0 1-16 0V40a8 8 0 0 1 16 0m-40 80H35l19-18a8 8 0 0 0-12-12l-32 32a8 8 0 0 0 0 12l32 32a8 8 0 0 0 12-12l-19-18h61a8 8 0 0 0 0-16m150 2-32-32a8 8 0 0 0-12 12l19 18h-61a8 8 0 0 0 0 16h61l-19 18a8 8 0 0 0 12 12l32-32a8 8 0 0 0 0-12"/>
+                        </svg>
+                    </div>
+                    <p class="name-text">Import and export</p>
+                </div>
+                <div class="icon-box" role="img" aria-label="Down arrow icon for functionality section">
+                    <svg class="down-arr" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                        <path d="m214 102-80 80a8 8 0 0 1-12 0l-80-80a8 8 0 0 1 12-12l74 75 74-75a8 8 0 0 1 12 12"/>
+                    </svg>
+                </div>
+             </div>
+             <!-- SECOND -->
+             <div class="funcion flex">
+                <div class="function-name flex">
+                    <div class="func-icon-box flex" role="img" aria-label="Painting pallet icon ">
+                        <svg class="func-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                            <path d="M201 54a103 103 0 0 0-73-30h-1A104 104 0 0 0 24 128c0 43 27 79 69 94a32 32 0 0 0 43-30 16 16 0 0 1 16-16h46a32 32 0 0 0 31-25l3-24a103 103 0 0 0-31-73m13 94a16 16 0 0 1-16 12h-46a32 32 0 0 0-32 32 16 16 0 0 1-21 15 83 83 0 0 1-59-79 88 88 0 0 1 87-88h1a88 88 0 0 1 88 87zm-74-72a12 12 0 1 1-12-12 12 12 0 0 1 12 12m-44 24a12 12 0 1 1-12-12 12 12 0 0 1 12 12m0 56a12 12 0 1 1-12-12 12 12 0 0 1 12 12m88-56a12 12 0 1 1-12-12 12 12 0 0 1 12 12"/>
+                        </svg>
+                    </div>
+                    <p class="name-text">Create and fill</p>
+                </div>
+                <div class="icon-box" role="img" aria-label="Down arrow icon for functionality section">
+                    <svg class="down-arr" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                        <path d="m214 102-80 80a8 8 0 0 1-12 0l-80-80a8 8 0 0 1 12-12l74 75 74-75a8 8 0 0 1 12 12"/>
+                    </svg>
+                </div>
+             </div>
+             <!-- THIRD -->
+             <div class="funcion flex">
+                <div class="function-name flex">
+                    <div class="func-icon-box flex" role="img" aria-label="Wand icon with stars surrounding it">
+                        <svg class="func-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                            <path d="M48 64a8 8 0 0 1 8-8h16V40a8 8 0 0 1 16 0v16h16a8 8 0 0 1 0 16H88v16a8 8 0 0 1-16 0V72H56a8 8 0 0 1-8-8m136 128h-8v-8a8 8 0 0 0-16 0v8h-8a8 8 0 0 0 0 16h8v8a8 8 0 0 0 16 0v-8h8a8 8 0 0 0 0-16m56-48h-16v-16a8 8 0 0 0-16 0v16h-16a8 8 0 0 0 0 16h16v16a8 8 0 0 0 16 0v-16h16a8 8 0 0 0 0-16m-21-64L80 219a16 16 0 0 1-23 0l-20-20a16 16 0 0 1 0-23L176 37a16 16 0 0 1 23 0l20 20a16 16 0 0 1 0 23m-54 32-21-21-96 96 21 21Zm43-43-21-21-32 32 21 21Z"/>
+                        </svg>
+                    </div>
+                    <p class="name-text">Magic</p>
+                </div>
+                <div class="icon-box" role="img" aria-label="Down arrow icon for functionality section">
+                    <svg class="down-arr" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                        <path d="m214 102-80 80a8 8 0 0 1-12 0l-80-80a8 8 0 0 1 12-12l74 75 74-75a8 8 0 0 1 12 12"/>
+                    </svg>
+                </div>
+             </div>
+             <!-- FOURTH -->
+             <div class="funcion flex">
+                <div class="function-name flex">
+                    <div class="func-icon-box flex" role="img" aria-label="Clock icon with arrow pointing to the left ">
+                        <svg class="func-icon"xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                            <path d="M136 80v43l36 22a8 8 0 0 1-8 14l-40-24a8 8 0 0 1-4-7V80a8 8 0 0 1 16 0m-8-48a95 95 0 0 0-68 28L40 82V64a8 8 0 0 0-16 0v40a8 8 0 0 0 8 8h40a8 8 0 0 0 0-16H49l22-25a80 80 0 1 1 2 115 8 8 0 1 0-11 12 96 96 0 1 0 66-166"/>
+                        </svg>
+                    </div>
+                    <p class="name-text">Go back in time</p>
+                </div>
+                <div class="icon-box" role="img" aria-label="Down arrow icon for functionality section">
+                    <svg class="down-arr" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                        <path d="m214 102-80 80a8 8 0 0 1-12 0l-80-80a8 8 0 0 1 12-12l74 75 74-75a8 8 0 0 1 12 12"/>
+                    </svg>
+                </div>
+             </div>
+        </div>
+    </div>
+    <div class="func-image">
+        <!-- INSERT IMAGE -->
+        <div class="placeholder" role="img" aria-label="Placeholder for functions section image" role="img"></div>
+    </div>
+</div>
+@endsection
 @section('values')
-<section class="values-section">
     <div class="values-container ">
         <div class="section-heading flex ">
             <div class="values-heading-box">
                 <div class="section-title flex">
-                    <svg class="check-mark" xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 256 256">
-                        <path d="m229.5 113-63.4-23L143 26.4a16 16 0 0 0-30 0L90 89.9 26.4 113a16 16 0 0 0 0 30l63.4 23 23.1 63.5a16 16 0 0 0 30 0l23-63.4 63.5-23.1a16 16 0 0 0 0-30m-72.4 39.3a8 8 0 0 0-4.8 4.8L128 223.9l-24.3-66.8a8 8 0 0 0-4.8-4.8L32.1 128l66.8-24.3a8 8 0 0 0 4.8-4.8L128 32.1l24.3 66.8a8 8 0 0 0 4.8 4.8l66.8 24.3Z"/>
-                    </svg>
+                    <div class="icon-box" role="img" aria-label="Star icon for values section">
+                        <svg class="title-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                            <path d="m229.5 113-63.4-23L143 26.4a16 16 0 0 0-30 0L90 89.9 26.4 113a16 16 0 0 0 0 30l63.4 23 23.1 63.5a16 16 0 0 0 30 0l23-63.4 63.5-23.1a16 16 0 0 0 0-30m-72.4 39.3a8 8 0 0 0-4.8 4.8L128 223.9l-24.3-66.8a8 8 0 0 0-4.8-4.8L32.1 128l66.8-24.3a8 8 0 0 0 4.8-4.8L128 32.1l24.3 66.8a8 8 0 0 0 4.8 4.8l66.8 24.3Z"/>
+                        </svg>
+                    </div>
                     <span class="title">Values</span>
                 </div>
                 <div class="heading">
-                    <h2 class="heading-secondary">What we offer&quest;</h2>
+                    <h2 class="heading-secondary">What we offer</h2>
                 </div>
             </div>
         </div>
@@ -39,7 +144,7 @@
                     </div>
                     <div class="value-image">
                         <!-- INSERT IMAGE -->
-                        <div class="placeholder" aria-label="Image placholder"></div>
+                        <div class="placeholder" role="img" aria-label="Image placholder"></div>
                     </div>
                 </div>
             </div>
@@ -57,7 +162,7 @@
                     </div>
                     <div class="value-image">
                         <!-- INSERT IMAGE -->
-                        <div class="placeholder" aria-label="Image placholder"></div>
+                        <div class="placeholder" role="img" aria-label="Image placholder"></div>
                     </div>
                 </div>
             </div>
@@ -81,39 +186,95 @@
                 </div>
             </div>
     </div>
-</section>
+@endsection
+@section('faq')
+    <div class="faq-container">
+        <div class="section-heading flex ">
+            <div class="faq-heading-box">
+                <div class="section-title flex">
+                    <div class="icon-box" role="img" aria-label="Information icon for frequently asked question section">
+                        <svg class="title-icon" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 256 256">
+                            <path d="M128 24a104 104 0 1 0 104 104A104 104 0 0 0 128 24m0 192a88 88 0 1 1 88-88 88 88 0 0 1-88 88m16-40a8 8 0 0 1-8 8 16 16 0 0 1-16-16v-40a8 8 0 0 1 0-16 16 16 0 0 1 16 16v40a8 8 0 0 1 8 8m-32-92a12 12 0 1 1 12 12 12 12 0 0 1-12-12"/>
+                        </svg>
+                    </div>
+                    <span class="title">FAQs</span>
+                </div>
+                <div class="heading">
+                    <h2 class="heading-secondary">Your questions answered</h2>
+                </div>
+            </div>
+        </div>
+        <div class="questions flex dir-col">
+            <!-- FIRST QUESTION -->
+            <div class="question flex">
+                <p class="question-text">Lorem ipsum d elit. Itaque minus delectus, eaque nisi velit optio id ex cumque ratione vero?</p>
+                <div role="img" aria-label="Plus icon for faq section">
+                    <svg class="plus-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                        <path d="M224 128a8 8 0 0 1-8 8h-80v80a8 8 0 0 1-16 0v-80H40a8 8 0 0 1 0-16h80V40a8 8 0 0 1 16 0v80h80a8 8 0 0 1 8 8"/>
+                    </svg>
+                </div>
+            </div>            
+            <!-- SECOND QUESTION -->
+            <div class="question flex">
+                <p class="question-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque minus delectus, eaque nisi velit optio id ex cumque ratione vero?</p>
+                <div role="img" aria-label="Plus icon for faq section">
+                    <svg class="plus-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                        <path d="M224 128a8 8 0 0 1-8 8h-80v80a8 8 0 0 1-16 0v-80H40a8 8 0 0 1 0-16h80V40a8 8 0 0 1 16 0v80h80a8 8 0 0 1 8 8"/>
+                    </svg>
+                </div>
+            </div>            
+            <!-- THIRD QUESTION -->
+            <div class="question flex">
+                <p class="question-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque minus delectus, eaque nisi velit optio id ex cumque ratione vero?</p>
+                <div role="img" aria-label="Plus icon for faq section">
+                    <svg class="plus-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                        <path d="M224 128a8 8 0 0 1-8 8h-80v80a8 8 0 0 1-16 0v-80H40a8 8 0 0 1 0-16h80V40a8 8 0 0 1 16 0v80h80a8 8 0 0 1 8 8"/>
+                    </svg>
+                </div>
+            </div>            
+            <!-- FOURTH QUESTION -->
+            <div class="question flex">
+                <p class="question-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque minus delectus, eaque nisi velit optio id ex cumque ratione vero?</p>
+                <div role="img" aria-label="Plus icon for faq section">
+                    <svg class="plus-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                        <path d="M224 128a8 8 0 0 1-8 8h-80v80a8 8 0 0 1-16 0v-80H40a8 8 0 0 1 0-16h80V40a8 8 0 0 1 16 0v80h80a8 8 0 0 1 8 8"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
 @endsection
 @section('footer')
 <section class="footer-section">
     <div class="footer-container flex dir-col">
         <div class="page-links">
             <ul class="links-list page flex">
+                <li><a href="#" class="footer-link" id="">Placeholder</a></li>
+                <li><a href="#" class="footer-link" id="">Placeholder</a></li>
+                <li><a href="#" class="footer-link" id="">Placeholder</a></li>
+                <li><a href="#" class="footer-link" id="">Placeholder</a></li>
                 <li><a href="#" class="footer-link" id="legal">Legal</a></li>
-                <li><a href="#" class="footer-link" id="">Legal</a></li>
-                <li><a href="#" class="footer-link" id="">Legal</a></li>
-                <li><a href="#" class="footer-link" id="">Legal</a></li>
-                <li><a href="#" class="footer-link" id="">Legal</a></li>
             </ul>
         </div>
         <div class="social-links">
             <ul class="links-list social flex">
-                <li><a href="#" class="footer-link" id="instagram">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 256 256">
+                <li><a href="#" class="footer-link" id="instagram" aria-label="Instagram">
+                    <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
                         <path d="M128 80a48 48 0 1 0 48 48 48 48 0 0 0-48-48m0 80a32 32 0 1 1 32-32 32 32 0 0 1-32 32m48-136H80a56 56 0 0 0-56 56v96a56 56 0 0 0 56 56h96a56 56 0 0 0 56-56V80a56 56 0 0 0-56-56m40 152a40 40 0 0 1-40 40H80a40 40 0 0 1-40-40V80a40 40 0 0 1 40-40h96a40 40 0 0 1 40 40ZM192 76a12 12 0 1 1-12-12 12 12 0 0 1 12 12"/>
                     </svg>
                 </a></li>
-                <li><a href="#" class="footer-link" id="linkedin">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 256 256">
+                <li><a href="#" class="footer-link" id="linkedin" aria-label="Linkedin">
+                    <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
                         <path d="M216 24H40a16 16 0 0 0-16 16v176a16 16 0 0 0 16 16h176a16 16 0 0 0 16-16V40a16 16 0 0 0-16-16m0 192H40V40h176zM96 112v64a8 8 0 0 1-16 0v-64a8 8 0 0 1 16 0m88 28v36a8 8 0 0 1-16 0v-36a20 20 0 0 0-40 0v36a8 8 0 0 1-16 0v-64a8 8 0 0 1 15.8-1.8A36 36 0 0 1 184 140m-84-56a12 12 0 1 1-12-12 12 12 0 0 1 12 12"/>
                     </svg>
                 </a></li>
-                <li><a href="#" class="footer-link" id="youtube">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 256 256">
+                <li><a href="#" class="footer-link" id="youtube" aria-label="Youtube">
+                    <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
                         <path d="m164.4 121.3-48-32A8 8 0 0 0 104 96v64a8 8 0 0 0 12.4 6.7l48-32a8 8 0 0 0 0-13.4M120 145.1V111l25.6 17Zm114.3-75.6a24 24 0 0 0-14.5-16.4C185.6 40 131 40 128 40s-57.6-.1-91.8 13.1a24 24 0 0 0-14.5 16.4C19 79.5 16 97.7 16 128s3 48.5 5.7 58.5a24 24 0 0 0 14.5 16.4C69 215.6 120.4 216 127.3 216h1.4c6.9 0 58.3-.4 91.1-13.1a24 24 0 0 0 14.5-16.4c2.6-10 5.7-28.2 5.7-58.5s-3-48.5-5.7-58.5m-15.5 113a8 8 0 0 1-4.7 5.5c-31.7 12.2-85.5 12-86 12h-.1c-.5 0-54.3.2-86-12a8 8 0 0 1-4.8-5.5c-2.4-9.1-5.2-26-5.2-54.5s2.8-45.4 5.2-54.5a8 8 0 0 1 4.7-5.5c30.6-11.8 81.7-12 85.9-12h.3c.5 0 54.3-.2 86 12a8 8 0 0 1 4.7 5.5c2.4 9.1 5.2 26 5.2 54.5s-2.8 45.4-5.2 54.5Z"/>
                     </svg>
                 </a></li>
-                <li><a href="#" class="footer-link" id="facebook">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 256 256">
+                <li><a href="#" class="footer-link" id="facebook" aria-label="Facebook">
+                    <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
                         <path d="M128 24a104 104 0 1 0 104 104A104 104 0 0 0 128 24m8 191.6V152h24a8 8 0 0 0 0-16h-24v-24a16 16 0 0 1 16-16h16a8 8 0 0 0 0-16h-16a32 32 0 0 0-32 32v24H96a8 8 0 0 0 0 16h24v63.6a88 88 0 1 1 16 0"/>
                     </svg>
                 </a></li>
