@@ -7,14 +7,55 @@
 <link href="{{asset('css/welcome.css')}}" rel="stylesheet">
 @endpush
 @section('nav-left-links')
+<li><a href="#" class="nav-link" id="" aria-label="">About</a></li>
 <li><a href="#" class="nav-link" id="" aria-label="">How it works</a></li>
-<li><a href="#" class="nav-link" id="" aria-label="">Values</a></li>
+<li><a href="#" class="nav-link" id="" aria-label="">What we offer</a></li>
 <li><a href="#" class="nav-link" id="" aria-label="">FaQ</a></li>
 @endsection
 @section('nav-right-links')
-<li><a href="#" class="nav-link" id="" aria-label="">Help</a></li>
 <li><a href="#" class="nav-link" id="" aria-label="">Login</a></li>
-<li><a href="#" class="nav-link" id="" aria-label="">Sign in</a></li>
+<li><a href="#" class="nav-link sign-up" id="" aria-label="">Sign up</a></li>
+@endsection
+@section('hero-text')
+<div class="heading-box">
+    <h1 class="heading-primary">Track your <br>Feul Prints <br> with ease</h1>
+    <div class="hero-copy">
+        <div class="catchphrase-text">
+            <p class="catchphrase">Effortlessly Monitor Your Car’s Fueling Habits, Spend, and Efficiency – <span class="highlight">For Free!</span></p>
+        </div>
+    </div>
+</div>
+<div class="hero-text-box">
+    <a href="#" class="btn sign-up">Sign up</a>
+    <a href="#" class="btn">Learn more</a>
+</div>
+@endsection
+@section('about')
+<div class="about-container grid grid-2-cols">
+    <div class="about-img">
+        <div class="placeholder" role="img" aria-label="Placeholder for functions section image" role="img"></div>
+    </div>
+    <div class="about-info">
+        <div class="section-heading">
+            <div class="section-title flex">
+                <div class="icon-box" role="img" aria-label="Icon of a person and a gear for about section">
+                    <svg class="title-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                        <path d="M231 212q-24-40-66-54a72 72 0 1 0-74 0q-42 14-66 54a8 8 0 1 0 14 8 102 102 0 0 1 178 0 8 8 0 1 0 14-8M72 96a56 56 0 1 1 56 56 56 56 0 0 1-56-56"/>
+                    </svg>
+                </div>
+                    <span class="title">About</span>
+                </div>
+                <div class="heading">   
+                    <h2 class="heading-secondary">About Fuelprint</h2>
+                </div>
+            </div>
+            <div class="about-copy-box">
+                <p class="about-copy">FuelPrint makes it easy to track your vehicle's fuel data, offering clear insights into your driving costs and fuel usage. Say goodbye to complicated spreadsheets and guesswork. You get simple, actionable information right at your fingertips. Whether you're managing a single vehicle or an entire fleet, we help you make smarter decisions about fuel efficiency and spending.</p>
+            </div>
+        </div>
+
+    </div>
+</div>
 @endsection
 @section('functionality')
 <div class="func-container grid grid-2-cols">
@@ -39,21 +80,28 @@
         </div>
         <div class="functions flex dir-col">
             <!-- FIRST -->
-             <div class="funcion flex">
-                <div class="function-name flex">
-                    <div class="func-icon-box flex" role="img" aria-label="Two arrows pointing in opposite directions separated by a straight line icon">
-                        <svg class="func-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
-                            <path d="M136 40v176a8 8 0 0 1-16 0V40a8 8 0 0 1 16 0m-40 80H35l19-18a8 8 0 0 0-12-12l-32 32a8 8 0 0 0 0 12l32 32a8 8 0 0 0 12-12l-19-18h61a8 8 0 0 0 0-16m150 2-32-32a8 8 0 0 0-12 12l19 18h-61a8 8 0 0 0 0 16h61l-19 18a8 8 0 0 0 12 12l32-32a8 8 0 0 0 0-12"/>
-                        </svg>
+             <div class="first-function">
+                 <div class="funcion flex">
+                     <div class="function-name flex">
+                         <div class="func-icon-box flex" role="img" aria-label="Two arrows pointing in opposite directions separated by a straight line icon">
+                             <svg class="func-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                                 <path d="M136 40v176a8 8 0 0 1-16 0V40a8 8 0 0 1 16 0m-40 80H35l19-18a8 8 0 0 0-12-12l-32 32a8 8 0 0 0 0 12l32 32a8 8 0 0 0 12-12l-19-18h61a8 8 0 0 0 0-16m150 2-32-32a8 8 0 0 0-12 12l19 18h-61a8 8 0 0 0 0 16h61l-19 18a8 8 0 0 0 12 12l32-32a8 8 0 0 0 0-12"/>
+                                </svg>
+                            </div>
+                            <p class="name-text">Import and export</p>
+                        </div>
+                        <div class="icon-box" role="img" aria-label="Down arrow icon for functionality section">
+                            <svg class="down-arr" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                                <path d="m214 102-80 80a8 8 0 0 1-12 0l-80-80a8 8 0 0 1 12-12l74 75 74-75a8 8 0 0 1 12 12"/>
+                            </svg>
+                        </div>
                     </div>
-                    <p class="name-text">Import and export</p>
+                    <!-- TEMP -->
+                    <div class="test" role="placholder" aria-label="Placeholder for functions section">
+                        <p class="test-teext">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore ipsa perspiciatis saepe illum eaque voluptas adipisci quisquam dolores quam dolorum?</p>
+                        <a href="#">Go here</a>
+                    </div>
                 </div>
-                <div class="icon-box" role="img" aria-label="Down arrow icon for functionality section">
-                    <svg class="down-arr" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
-                        <path d="m214 102-80 80a8 8 0 0 1-12 0l-80-80a8 8 0 0 1 12-12l74 75 74-75a8 8 0 0 1 12 12"/>
-                    </svg>
-                </div>
-             </div>
              <!-- SECOND -->
              <div class="funcion flex">
                 <div class="function-name flex">
@@ -249,11 +297,11 @@
     <div class="footer-container flex dir-col">
         <div class="page-links">
             <ul class="links-list page flex">
-                <li><a href="#" class="footer-link" id="">Placeholder</a></li>
-                <li><a href="#" class="footer-link" id="">Placeholder</a></li>
-                <li><a href="#" class="footer-link" id="">Placeholder</a></li>
+                <li><a href="#" class="footer-link" id="">Back to top</a></li>
+                <li><a href="#" class="footer-link" id="">Learn more</a></li>
                 <li><a href="#" class="footer-link" id="">Placeholder</a></li>
                 <li><a href="#" class="footer-link" id="legal">Legal</a></li>
+                <li><a href="#" class="footer-link" id="">Sitemap</a></li>
             </ul>
         </div>
         <div class="social-links">

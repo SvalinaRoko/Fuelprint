@@ -7,6 +7,7 @@ html{
     font-size: 62.5%;
 }
 body{
+    position: relative;
     min-height: 100vh;
     font-size: 1.4rem;
     color: #333;
@@ -42,11 +43,10 @@ main{
 .grid-4-rows{
     grid-template-rows:repeat(4,1fr)
 }
-.title-icon{
-    fill: #fff;
-}
 .heading-primary{
-
+    color: #fff;
+    font-size: 18rem;
+    line-height: 18rem;
 }
 
 .heading-secondary{
