@@ -1,10 +1,11 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
-    <html lang="en">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="/js/script.js" type="text/javascript" defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap" rel="stylesheet">
     <title>@yield ('title', 'Fuelprint')</title>
     @stack('styles')
@@ -32,7 +33,7 @@
                 <div class="temp flex">
                 <div class="page-translate">
                     <!-- ADD TRANSLATE FUNCTION -->
-                    <!--  -->
+                    <!-- TODO-->
                     <ul class="nav-links flex">
                         @yield('nav-right-links')
                     </ul>
