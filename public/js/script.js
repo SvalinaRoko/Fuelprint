@@ -33,3 +33,4 @@ function closeAll(except = null) {
         fn.querySelector(".down-arr")?.classList.remove("rotate");
     }})
     };
+console.log('aaa');
