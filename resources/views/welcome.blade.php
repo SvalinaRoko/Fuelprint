@@ -7,10 +7,10 @@
 <link href="{{asset('css/welcome.css')}}" rel="stylesheet">
 @endpush
 @section('nav-left-links')
-<li><a href="#" class="nav-link" id="" aria-label="">About</a></li>
-<li><a href="#" class="nav-link" id="" aria-label="">How it works</a></li>
-<li><a href="#" class="nav-link" id="" aria-label="">What we offer</a></li>
-<li><a href="#" class="nav-link" id="" aria-label="">FaQ</a></li>
+<li><a href="#about" class="nav-link" id="" aria-label="">About</a></li>
+<li><a href="#functionality" class="nav-link" id="" aria-label="">How it works</a></li>
+<li><a href="#values" class="nav-link" id="" aria-label="">What we offer</a></li>
+<li><a href="#faq" class="nav-link" id="" aria-label="">FaQ</a></li>
 @endsection
 @section('nav-right-links')
 <li><a href="#" class="nav-link" id="" aria-label="">Login</a></li>
@@ -80,7 +80,7 @@
         <div class="functions flex dir-col">
             <!-- FIRST -->
              <div class="func-nbr" id="one">
-                 <div class="function closed flex" data-dropdown>
+                 <div class="function active-btn closed flex" data-dropdown>
                      <div class="function-name flex">
                          <div class="func-icon-box flex" role="img" aria-label="Two arrows pointing in opposite directions separated by a straight line icon">
                              <svg class="func-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
@@ -90,19 +90,19 @@
                             <p class="name-text">Import and export</p>
                         </div>
                         <div class="icon-box" role="img" aria-label="Down arrow icon for functionality section" data-dropdown-button>
-                                <svg  class="down-arr" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                                <svg  class="down-arr active-btn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
                                     <path d="m214 102-80 80a8 8 0 0 1-12 0l-80-80a8 8 0 0 1 12-12l74 75 74-75a8 8 0 0 1 12 12"/>
                                 </svg>
                         </div>
                     </div>
-                    <div class="dd-container closed">
+                    <div class="dd-functions-container closed">
                         <p class="dd-copy">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore ipsa perspiciatis saepe illum eaque voluptas adipisci quisquam dolores quam dolorum?</p>
                         <a href="#">Go here</a>
                     </div>
                 </div>
              <!-- SECOND -->
               <div class="func-nbr" id="two">
-                  <div class="function closed flex" data-dropdown>
+                  <div class="function active-btn closed flex" data-dropdown>
                       <div class="function-name flex">
                           <div class="func-icon-box flex" role="img" aria-label="Painting pallet icon ">
                               <svg class="func-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
@@ -112,19 +112,19 @@
                             <p class="name-text">Create and fill</p>
                         </div>
                         <div class="icon-box" role="img" aria-label="Down arrow icon for functionality section" data-dropdown-button>
-                                <svg  class="down-arr" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                                <svg  class=" down-arr active-btn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
                                     <path d="m214 102-80 80a8 8 0 0 1-12 0l-80-80a8 8 0 0 1 12-12l74 75 74-75a8 8 0 0 1 12 12"/>
                                 </svg>
                         </div>
                     </div>
-                    <div class="dd-container closed" data-dropdown-content>
+                    <div class="dd-functions-container closed" data-dropdown-content>
                         <p class="dd-copy">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore ipsa perspiciatis saepe illum eaque voluptas adipisci quisquam dolores quam dolorum?</p>
                         <a href="#">Go here</a>
                     </div>
                 </div>
              <!-- THIRD -->
               <div class="func-nbr" id="three">
-                  <div class="function closed flex" data-dropdown>
+                  <div class="function active-btn closed flex" data-dropdown>
                       <div class="function-name flex">
                           <div class="func-icon-box flex" role="img" aria-label="Wand icon with stars surrounding it" >
                               <svg class="func-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
@@ -134,19 +134,19 @@
                             <p class="name-text">Magic</p>
                         </div>
                         <div class="icon-box" role="img" aria-label="Down arrow icon for functionality section" data-dropdown-button>
-                                <svg  class="down-arr" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                                <svg  class="down-arr active-btn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
                                     <path d="m214 102-80 80a8 8 0 0 1-12 0l-80-80a8 8 0 0 1 12-12l74 75 74-75a8 8 0 0 1 12 12"/>
                                 </svg>
                         </div>
                     </div>
-                    <div class="dd-container closed">
-                        <p class="dd-copy">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore ipsa perspiciatis saepe illum eaque voluptas adipisci quisquam dolores quam dolorum?</p>
+                    <div class="dd-functions-container closed">
+                        <p class="dd-copy">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, laboriosam.</p>
                         <a href="#">Go here</a>
                     </div>
                 </div>
              <!-- FOURTH -->
               <div class="func-nbr" id="four" >
-                <div class="function closed flex" data-dropdown>
+                <div class="function active-btn closed flex" data-dropdown>
                     <div class="function-name flex">
                         <div class="func-icon-box flex" role="img" aria-label="Clock icon with arrow pointing to the left " >
                         <svg class="func-icon"xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
@@ -156,21 +156,35 @@
                         <p class="name-text">Go back in time</p>
                     </div>
                     <div class="icon-box" role="img" aria-label="Down arrow icon for functionality section" >
-                            <svg class="down-arr" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" data-dropdown-button>
+                            <svg class="down-arr active-btn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" data-dropdown-button>
                                 <path d="m214 102-80 80a8 8 0 0 1-12 0l-80-80a8 8 0 0 1 12-12l74 75 74-75a8 8 0 0 1 12 12"/>
                             </svg>
                     </div>
                 </div>
-                <div class="dd-container closed">
+                <div class="dd-functions-container closed">
                     <p class="dd-copy">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore ipsa perspiciatis saepe illum eaque voluptas adipisci quisquam dolores quam dolorum?</p>
                     <a href="#">Go here</a>
                 </div>
             </div>
         </div>
     </div>
-    <div class="func-image">
+    <div class="func-images">
         <!-- INSERT IMAGE -->
-        <div class="placeholder" role="img" aria-label="Placeholder for functions section image" role="img"></div>
+        <div class="image-box show" id="img-default" aria-label="a" role="img">
+            <!-- <img class="func-image" src="" alt=""> -->
+        </div>
+        <div class="image-box dissapear" id="img-one" aria-label="a" role="img">
+            <!-- <img class="func-image" src="" alt=""> -->
+        </div>
+        <div class="image-box dissapear" id="img-two" aria-label="a" role="img">
+            <!-- <img class="func-image" src="" alt=""> -->
+        </div>
+        <div class="image-box dissapear" id="img-three" aria-label="a" role="img">
+            <!-- <img class="func-image" src="" alt=""> -->
+        </div>
+        <div class="image-box dissapear" id="img-four" aria-label="a" role="img">
+            <!-- <img class="func-image" src="" alt=""> -->
+        </div>
     </div>
 </div>
 @endsection
@@ -270,46 +284,69 @@
         </div>
         <div class="questions flex dir-col">
             <!-- FIRST QUESTION -->
-            <div class="question flex">
-                <p class="question-text">Lorem ipsum d elit. Itaque minus delectus, eaque nisi velit optio id ex cumque ratione vero?</p>
-                <div role="img" aria-label="Plus icon for faq section">
-                    <svg class="plus-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
-                        <path d="M224 128a8 8 0 0 1-8 8h-80v80a8 8 0 0 1-16 0v-80H40a8 8 0 0 1 0-16h80V40a8 8 0 0 1 16 0v80h80a8 8 0 0 1 8 8"/>
-                    </svg>
+             <div class="question-nbr" id="Qone">
+                 <div class="question active-question flex">
+                     <p class="question-text">Lorem ipsum d elit. Itaque minus delectus, eaque nisi velit optio id ex cumque ratione vero?</p>
+                     <div  role="img" aria-label="Plus icon for faq section">
+                         <svg class="plus-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                             <path d="M224 128a8 8 0 0 1-8 8h-80v80a8 8 0 0 1-16 0v-80H40a8 8 0 0 1 0-16h80V40a8 8 0 0 1 16 0v80h80a8 8 0 0 1 8 8"/>
+                            </svg>
+                        </div>
+                    </div>  
+                    <div class="dd-question-container closed">
+                        <P class="dd-question-copy">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo reprehenderit ipsa eligendi molestiae, dolorum ducimus! Vero atque minima expedita! Quia exercitationem, doloribus voluptatem quaerat sed corporis nihil dicta ullam repellendus sunt itaque ea enim omnis ex eum, nisi architecto excepturi!</P>
+                    </div>          
                 </div>
-            </div>            
             <!-- SECOND QUESTION -->
-            <div class="question flex">
-                <p class="question-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque minus delectus, eaque nisi velit optio id ex cumque ratione vero?</p>
-                <div role="img" aria-label="Plus icon for faq section">
-                    <svg class="plus-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
-                        <path d="M224 128a8 8 0 0 1-8 8h-80v80a8 8 0 0 1-16 0v-80H40a8 8 0 0 1 0-16h80V40a8 8 0 0 1 16 0v80h80a8 8 0 0 1 8 8"/>
-                    </svg>
+             <div class="question-nbr" id="Qtwo">
+                 <div class="question active-question flex">
+                     <p class="question-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque minus delectus, eaque nisi velit optio id ex cumque ratione vero?</p>
+                     <div role="img" aria-label="Plus icon for faq section">
+                         <svg class="plus-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                             <path d="M224 128a8 8 0 0 1-8 8h-80v80a8 8 0 0 1-16 0v-80H40a8 8 0 0 1 0-16h80V40a8 8 0 0 1 16 0v80h80a8 8 0 0 1 8 8"/>
+                            </svg>
+                        </div>
+                    </div>  
+                    <div class="dd-question-container closed">
+                        <P class="dd-question-copy">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo reprehenderit ipsa eligendi molestiae, dolorum ducimus! Vero atque minima expedita! Quia exercitationem, doloribus voluptatem quaerat sed corporis nihil dicta ullam repellendus sunt itaque ea enim omnis ex eum, nisi architecto excepturi!</P>
+                    </div>          
                 </div>
-            </div>            
             <!-- THIRD QUESTION -->
-            <div class="question flex">
-                <p class="question-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque minus delectus, eaque nisi velit optio id ex cumque ratione vero?</p>
-                <div role="img" aria-label="Plus icon for faq section">
-                    <svg class="plus-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
-                        <path d="M224 128a8 8 0 0 1-8 8h-80v80a8 8 0 0 1-16 0v-80H40a8 8 0 0 1 0-16h80V40a8 8 0 0 1 16 0v80h80a8 8 0 0 1 8 8"/>
-                    </svg>
+             <div class="question-nbr" id="Qthree">
+                 <div class="question active-question flex">
+                     <p class="question-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque minus delectus, eaque nisi velit optio id ex cumque ratione vero?</p>
+                     <div role="img" aria-label="Plus icon for faq section">
+                         <svg class="plus-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                             <path d="M224 128a8 8 0 0 1-8 8h-80v80a8 8 0 0 1-16 0v-80H40a8 8 0 0 1 0-16h80V40a8 8 0 0 1 16 0v80h80a8 8 0 0 1 8 8"/>
+                            </svg>
+                        </div>
+                    </div> 
+                    <div class="dd-question-container closed">
+                        <P class="dd-question-copy">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo reprehenderit ipsa eligendi molestiae, dolorum ducimus! Vero atque minima expedita! Quia exercitationem, doloribus voluptatem quaerat sed corporis nihil dicta ullam repellendus sunt itaque ea enim omnis ex eum, nisi architecto excepturi!</P>
+                    </div>           
                 </div>
-            </div>            
             <!-- FOURTH QUESTION -->
-            <div class="question flex">
-                <p class="question-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque minus delectus, eaque nisi velit optio id ex cumque ratione vero?</p>
-                <div role="img" aria-label="Plus icon for faq section">
-                    <svg class="plus-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
-                        <path d="M224 128a8 8 0 0 1-8 8h-80v80a8 8 0 0 1-16 0v-80H40a8 8 0 0 1 0-16h80V40a8 8 0 0 1 16 0v80h80a8 8 0 0 1 8 8"/>
-                    </svg>
+             <div class="question-nbr" id="Qfour">
+                 <div class="question active-question flex">
+                     <p class="question-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque minus delectus, eaque nisi velit optio id ex cumque ratione vero?</p>
+                     <div role="img" aria-label="Plus icon for faq section">
+                         <svg class="plus-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                             <path d="M224 128a8 8 0 0 1-8 8h-80v80a8 8 0 0 1-16 0v-80H40a8 8 0 0 1 0-16h80V40a8 8 0 0 1 16 0v80h80a8 8 0 0 1 8 8"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="dd-question-container closed">
+                    <P class="dd-question-copy">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo reprehenderit ipsa eligendi molestiae, dolorum ducimus! Vero atque minima expedita! Quia exercitationem, doloribus voluptatem quaerat sed corporis nihil dicta ullam repellendus sunt itaque ea enim omnis ex eum, nisi architecto excepturi!</P>
                 </div>
             </div>
         </div>
     </div>
 @endsection
+@section("cta")
+
+@endsection
 @section('footer')
-<section class="footer-section">
+<section class="section" id="footer">
     <div class="footer-container flex dir-col">
         <div class="page-links">
             <ul class="links-list page flex">

@@ -30,8 +30,7 @@
                         @yield('nav-left-links')
                     </ul>
                 </div>
-                <div class="temp flex">
-                <div class="page-translate">
+                <div class="">
                     <!-- ADD TRANSLATE FUNCTION -->
                     <!-- TODO-->
                     <ul class="nav-links flex">
@@ -45,17 +44,20 @@
         </div>
     </header>
     <main>
-        <section class="about-section">
+        <section class="section" id="about">
             @yield('about')
         </section>
-        <section class="functionality-section"> 
+        <section class="section" id="functionality"> 
             @yield('functionality')
         </section>
-        <section class="values-section">
+        <section class="section" id="values">
             @yield('values')
         </section>
-        <section class="faq-section">
+        <section class="section" id="faq">
             @yield('faq')
+        </section>
+        <section class="section">   
+            @yield("cta")
         </section>
     </main>
     <footer class="footer">

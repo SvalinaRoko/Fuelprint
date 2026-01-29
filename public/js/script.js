@@ -1,18 +1,26 @@
 // FUNCTIONS SECTION DROPDOWN
 document.addEventListener('click', (e) => {
-    const arrow = e.target.closest(".down-arr");
+    const active = e.target.closest(".active-btn");
     const functionBlock= e.target.closest(".func-nbr");
+    const imageBox = e.target.closest(".func-images");
+
+    if (!imageBox) {
+        showDefaultImage();
+    }
 
     if(!functionBlock){
         closeAll();
         return;
     }
 
-    if(arrow){
+    if(active){
         const bar = functionBlock.querySelector(".function");
-        const content = functionBlock.querySelector(".dd-container");
+        const content = functionBlock.querySelector(".dd-functions-container");
+        const arrow = functionBlock.querySelector(".down-arr");
 
         closeAll(functionBlock);
+
+        functionBlock.classList.toggle("spaceBottom");
 
         bar.classList.toggle('opened');
         bar.classList.toggle('closed');
@@ -21,16 +29,113 @@ document.addEventListener('click', (e) => {
         arrow.classList.toggle('rotate')
     }
 
-})
+    if(active){
+        if(!active){
+            return;
+        }
 
+        const images = {
+            default:document.getElementById('img-default'),
+            one:document.getElementById('img-one'),
+            two:document.getElementById('img-two'),
+            three:document.getElementById('img-three'),
+            four:document.getElementById('img-four')
+        };
+        
+        const current = functionBlock.id;
+        console.log(current);
+        
+        Object.entries(images).forEach(([key,img]) => {
+            console.log(img);
+            const isActive = key === current;
+            img.classList.toggle('show',isActive);
+            img.classList.toggle('dissapear',!isActive);
+        });
+    }                        
+function showDefaultImage() {
+    document.querySelectorAll('.image-box').forEach(img => {
+        const isDefault = img.id === 'img-default';
+        img.classList.toggle('show', isDefault);
+        img.classList.toggle('dissapear', !isDefault);
+    });
+}
 function closeAll(except = null) {
     document.querySelectorAll(".func-nbr").forEach(fn => {
       if (fn !== except) {
+        fn.classList.remove("spaceBottom")
         fn.querySelector(".function")?.classList.remove("opened");
         fn.querySelector(".function")?.classList.add("closed");
-        fn.querySelector(".dd-container")?.classList.remove("opened");
-        fn.querySelector(".dd-container")?.classList.add("closed");
+        fn.querySelector(".dd-functions-container")?.classList.remove("opened");
+        fn.querySelector(".dd-functions-container")?.classList.add("closed");
         fn.querySelector(".down-arr")?.classList.remove("rotate");
-    }})
+    }});
+}
+});
+
+// FAQ SECTION DROPDOWN
+document.addEventListener('click', (e) => {
+    const questionBlock = e.target.closest(".question-nbr");
+    const activeQuestion = e.target.closest(".active-question");
+
+    if(!questionBlock){
+        closeAllQ();
+        return;
+    }
+
+    const questions = {
+        Qone:document.getElementById("Qone"),
+        Qtwo:document.getElementById("Qtwo"),
+        Qthree:document.getElementById("Qthree"),
+        Qfour:document.getElementById("Qfour")
     };
-console.log('aaa');
+    const currentQ = questionBlock.id;
+    console.log(currentQ);
+
+    if(activeQuestion){
+        const question = questionBlock.querySelector(".question");
+        const questionContent = questionBlock.querySelector(".dd-question-container");
+        const plusIcon = questionBlock.querySelector(".plus-icon");
+        closeAllQ(questionBlock);
+        question.classList.toggle('borderRadius');
+        questionBlock.classList.toggle('spaceBottom');
+        questionContent.classList.toggle('closed');
+        questionContent.classList.toggle('opened');
+        plusIcon.classList.toggle('closeQ')
+    }
+
+    function closeAllQ(except = null){
+        document.querySelectorAll(".question-nbr").forEach( qe => {
+            if(qe !== except){
+                qe.classList.remove('spaceBottom');
+                qe.querySelector(".dd-question-container")?.classList.add("closed");
+                qe.querySelector(".dd-question-container")?.classList.remove("opened");
+                qe.querySelector(".plus-icon")?.classList.remove("closeQ");
+                qe.querySelector(".question")?.classList.remove("borderRadius");
+            }
+        })
+    }
+})
+
+// SMOOTHE SCROLLING
+const section = document.querySelectorAll(".section");
+const navLinks = document.querySelectorAll(".nav-links .nav-link");
+const OFFSET = 300;
+
+for (const link of navLinks){
+    link.addEventListener("click", smoothScroll);
+}
+
+function smoothScroll (event){
+    event.preventDefault();
+    const targetId = this.getAttribute("href");
+    const targetElement = document.querySelector(targetId);
+
+    if(targetElement){
+        const targetPossition = targetElement.getBoundingClientRect().top +window.pageYOffset - OFFSET;
+        
+        window.scrollTo({
+            top:targetPossition,
+            behavior: "smooth"
+        });
+    }
+}
