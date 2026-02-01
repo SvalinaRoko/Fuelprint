@@ -150,19 +150,21 @@ function setFootprintAnimation(){
         }, index * 200);
     });   
 }
-// HERO ANIMATION
+// ---------- ANIMATIONS ----------
+// HERO SECTION
 const nav = document.querySelector(".navigation");
 const catchphrase = document.querySelector(".catchphrase-text");
 const heroBtns = document.querySelectorAll(".hero-btn");
 if(nav){
     nav.classList.add("nav-animation");
-    if (catchphrase) {
-        catchphrase.classList.add("catchphrase-animation");
-    }
 
     const headings = document.querySelectorAll(".heading-primary");
     const headingDelay = 200;
     const heroDuration = headings.length * headingDelay;
+
+    setTimeout(() => {
+        catchphrase.classList.add("catchphrase-animation");
+    }, heroDuration + 200);
 
     setTimeout(() => {
         heroBtns.forEach(btn => {
@@ -180,5 +182,36 @@ if(nav){
             setFootprintAnimation();
         },heroDuration + 200)
     };
+    
+// ABOUT SECTION
+const firstsection = section[0];
+
+const aboutImage = document.querySelector(".about-container .about-img");
+const aboutTitle = document.querySelector(".t");
+const aboutHeading = document.querySelector(".h");
+const aboutCopy = document.querySelector(".p");
+
+const sectionObserver = new IntersectionObserver((entries,observer) => {
+    entries.forEach(entry => {
+    if(entry.isIntersecting){
+        setTimeout(()=>{
+            aboutImage.classList.add("img-animation");
+        },700)
+        aboutHeading.classList.add("text-animation");
+        setTimeout(()=>{
+            aboutCopy.classList.add("text-animation");
+        },700)
+
+        setTimeout(() => {
+            aboutTitle.classList.add("title-animation");
+        },500)
+
+        observer.unobserve(entry.target);
+    };
+})
+},{
+    threshold:0.5
+})
+sectionObserver.observe(firstsection);
 
   
