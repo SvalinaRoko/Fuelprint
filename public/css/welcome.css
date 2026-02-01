@@ -1,6 +1,7 @@
-
 /* NAVIGATION */
 .header-section{
+    z-index: 999;
+    position: relative;
     background:linear-gradient(rgba(9, 133, 227, 0.60),#fff);
     max-width: 100vw;
     min-height: 120rem;
@@ -21,6 +22,12 @@
     justify-content: space-between;
     align-items: center;
     gap: 1rem;
+
+    transform: translateY(-10rem);
+}
+.nav-animation{
+    transform: translateY(0rem);
+    transition: transform 1s ease;
 }
 .logo{
     max-width: 20rem;
@@ -32,7 +39,7 @@
 
     gap: 2rem;
 }
-.nav-link{
+.btn-link{
     color: #333;
     font-size: 1.6rem;
     text-decoration:none;
@@ -42,6 +49,10 @@
     text-align: center;
     margin: 0 auto 10rem auto;
     max-width: fit-content;
+}
+.heading-animation{
+    transform: translateX(0rem);
+    transition: transform 0.4s ease-in;
 }
 .hero-copy{
     padding: 0 1rem;
@@ -53,6 +64,11 @@
 }
 .catchphrase-text{
     margin-bottom: 2rem;
+    opacity: 0;
+}
+.catchphrase-animation{
+    opacity: 1;
+    transition: opacity 1s ease-in;
 }
 .catchphrase{
     color: #0984e3;
@@ -66,6 +82,13 @@
     max-width:fit-content;
     min-height: auto;
     margin: 0 auto;
+}
+.hero-btn {
+    opacity: 0;
+    transition: opacity 1s ease-in;
+}
+.hero-btn-animation {
+    opacity: 1;
 }
 .btn{
     font-size: 2.5rem;
@@ -97,10 +120,23 @@
     color: #fff;
     margin-right:2rem ;
 }
-.nav-link.sign-up{
+.nav-links .sign-up{
     padding: 0.5em;
     border-radius: 1rem;
 }
+/* HERO */
+.header-footprints{
+    min-width: 100%;
+    min-height: 50%;
+
+    z-index: -1;
+    position: absolute;
+    top: 30rem;
+}
+.footprint path {
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
 /* ABOUT */
 .about-container{
     padding: 0 1rem;
@@ -210,6 +246,7 @@
 .func-nbr{
     position: relative;
     margin-bottom:4rem;
+    cursor:pointer;
     transition: margin-bottom 500ms ease;
 }
 
@@ -339,6 +376,7 @@
     margin: 0 2rem;
     border-radius: 2rem;
     background-color: rgba(153, 153, 153, 0.1);
+    transition: background-color 500ms ease;
     padding: 3rem 2rem;
     justify-content: space-between;
     align-items: center;
@@ -347,6 +385,13 @@
     position: relative;
     margin-bottom: 4rem;
     transition: margin-bottom 200ms ease-in;
+
+}
+.question:hover,
+.question:active{
+    cursor: pointer;
+    background-color:#cee6f9;
+    transition: background-color 500ms ease;
 }
 .question-text{
     max-width: 100%;
@@ -364,7 +409,7 @@
 .dd-question-container{
     margin:0 2rem;
     padding: 3.5rem 2rem 3rem 2rem;
-    background-color: rgba(153, 153, 153, 0.1);
+    background-color:#cee6f9;
     border-radius:0 0 2rem 2rem ;
 
     position: absolute;
@@ -382,6 +427,7 @@
 .borderRadius{
     border-radius: 2rem 2rem 0 0;
     transition: border-radius 800ms ease;
+    background-color:#cee6f9;
 }
 .spaceBottom{
     margin-bottom: 12rem;

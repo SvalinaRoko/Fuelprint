@@ -31,8 +31,8 @@
                     </ul>
                 </div>
                 <div class="">
-                    <!-- ADD TRANSLATE FUNCTION -->
                     <!-- TODO-->
+                    <!-- ADD TRANSLATE FUNCTION -->
                     <ul class="nav-links flex">
                         @yield('nav-right-links')
                     </ul>
@@ -41,6 +41,9 @@
         </div>
         <div class="hero-text-box">
             @yield('hero-text')
+        </div>
+        <div class="footprints">
+            @yield("footprints")
         </div>
     </header>
     <main>

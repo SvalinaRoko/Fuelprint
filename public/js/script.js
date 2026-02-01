@@ -118,7 +118,7 @@ document.addEventListener('click', (e) => {
 
 // SMOOTHE SCROLLING
 const section = document.querySelectorAll(".section");
-const navLinks = document.querySelectorAll(".nav-links .nav-link");
+const navLinks = document.querySelectorAll(".nav-links .btn-link");
 const OFFSET = 300;
 
 for (const link of navLinks){
@@ -139,3 +139,46 @@ function smoothScroll (event){
         });
     }
 }
+// FOOTPRINTS ANIMATION
+function setFootprintAnimation(){
+
+    document.querySelectorAll('.footprint').forEach((group, index) => {
+        const paths = group.querySelectorAll('path');
+        
+        setTimeout(() => {
+            paths.forEach(p => p.style.opacity = 1);
+        }, index * 200);
+    });   
+}
+// HERO ANIMATION
+const nav = document.querySelector(".navigation");
+const catchphrase = document.querySelector(".catchphrase-text");
+const heroBtns = document.querySelectorAll(".hero-btn");
+if(nav){
+    nav.classList.add("nav-animation");
+    if (catchphrase) {
+        catchphrase.classList.add("catchphrase-animation");
+    }
+
+    const headings = document.querySelectorAll(".heading-primary");
+    const headingDelay = 200;
+    const heroDuration = headings.length * headingDelay;
+
+    setTimeout(() => {
+        heroBtns.forEach(btn => {
+            btn.classList.add("hero-btn-animation");
+        });
+    }, heroDuration + 200);
+
+    headings.forEach((heading, index) => {
+        setTimeout(() => {
+                heading.classList.add("heading-animation");
+            },index * headingDelay)
+        })
+
+        setTimeout(() => {
+            setFootprintAnimation();
+        },heroDuration + 200)
+    };
+
+  
