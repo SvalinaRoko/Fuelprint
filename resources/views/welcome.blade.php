@@ -104,7 +104,7 @@
     </div>
     <div class="about-info">
         <div class="section-heading">
-            <div class="section-title flex t" id="aboutCopy">
+            <div class="section-title flex at" id="aboutCopy">
                 <div class="icon-box" role="img" aria-label="Icon of a person and a gear for about section">
                     <svg class="title-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
                         <path d="M231 212q-24-40-66-54a72 72 0 1 0-74 0q-42 14-66 54a8 8 0 1 0 14 8 102 102 0 0 1 178 0 8 8 0 1 0 14-8M72 96a56 56 0 1 1 56 56 56 56 0 0 1-56-56"/>
@@ -113,10 +113,10 @@
                     <span class="title">About</span>
                 </div>
                 <div class="heading">   
-                    <h2 class="heading-secondary h" id="aboutCopy">About Fuelprint</h2>
+                    <h2 class="heading-secondary ah" id="aboutCopy">About Fuelprint</h2>
                 </div>
             </div>
-            <div class="about-copy-box p" id="aboutCopy">
+            <div class="about-copy-box ap" id="aboutCopy">
                 <p class="about-copy">FuelPrint makes it easy to track your vehicle's fuel data, offering clear insights into your driving costs and fuel usage. Say goodbye to complicated spreadsheets and guesswork. You get simple, actionable information right at your fingertips. Whether you're managing a single vehicle or an entire fleet, we help you make smarter decisions about fuel efficiency and spending.</p>
             </div>
         </div>
@@ -128,7 +128,7 @@
     <div class="func-info-container">
         <div class="section-heading flex ">
             <div class="values-heading-box">
-                <div class="section-title flex">
+                <div class="section-title flex ft">
                     <div class="icon-box" role="img" aria-label="Puzzle icon for values section">
                         <svg class="title-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
                             <path d="m220 159-7-1a20 20 0 1 1 0-36 8 8 0 0 0 11-7V72a16 16 0 0 0-16-16h-36v-4a36 36 0 0 0-11-26 36 36 0 0 0-61 23v7H64a16 16 0 0 0-16 16v32h-4a36 36 0 0 0-26 11 36 36 0 0 0-10 27 36 36 0 0 0 33 34h7v32a16 16 0 0 0 16 16h144a16 16 0 0 0 16-16v-43zm-12 49H64v-43a8 8 0 0 0-11-7 20 20 0 1 1 0-36 8 8 0 0 0 11-7V72h47a8 8 0 0 0 7-11 20 20 0 1 1 36 0 8 8 0 0 0 7 11h47v32h-7a36 36 0 0 0 3 72h4Z"/>
@@ -137,16 +137,16 @@
                     <span class="title">How it works</span>
                 </div>
                 <div class="heading">
-                    <h2 class="heading-secondary">Here is how <br>Fuelprint works</h2>
+                    <h2 class="heading-secondary fh">Here is how <br>Fuelprint works</h2>
                 </div>
-                <div class="hint">
+                <div class="hint ft">
                     <small class="hint-text">Hint: it's unbelievably easy</small>
                 </div>
             </div>
         </div>
         <div class="functions flex dir-col">
             <!-- FIRST -->
-             <div class="func-nbr" id="one">
+             <div class="func-nbr f" id="one">
                  <div class="function active-btn closed flex" data-dropdown>
                      <div class="function-name flex">
                          <div class="func-icon-box flex" role="img" aria-label="Two arrows pointing in opposite directions separated by a straight line icon">
@@ -168,7 +168,7 @@
                     </div>
                 </div>
              <!-- SECOND -->
-              <div class="func-nbr" id="two">
+              <div class="func-nbr f" id="two">
                   <div class="function active-btn closed flex" data-dropdown>
                       <div class="function-name flex">
                           <div class="func-icon-box flex" role="img" aria-label="Painting pallet icon ">
@@ -190,7 +190,7 @@
                     </div>
                 </div>
              <!-- THIRD -->
-              <div class="func-nbr" id="three">
+              <div class="func-nbr f" id="three">
                   <div class="function active-btn closed flex" data-dropdown>
                       <div class="function-name flex">
                           <div class="func-icon-box flex" role="img" aria-label="Wand icon with stars surrounding it" >
@@ -212,7 +212,7 @@
                     </div>
                 </div>
              <!-- FOURTH -->
-              <div class="func-nbr" id="four" >
+              <div class="func-nbr f" id="four" >
                 <div class="function active-btn closed flex" data-dropdown>
                     <div class="function-name flex">
                         <div class="func-icon-box flex" role="img" aria-label="Clock icon with arrow pointing to the left " >
@@ -235,7 +235,7 @@
             </div>
         </div>
     </div>
-    <div class="func-images">
+    <div class="func-images fi">
         <!-- INSERT IMAGE -->
         <div class="image-box show" id="img-default" aria-label="a" role="img">
             <!-- <img class="func-image" src="" alt=""> -->
