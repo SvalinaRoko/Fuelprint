@@ -156,13 +156,14 @@ const catchphrase = document.querySelector(".catchphrase-text");
 const heroBtns = document.querySelectorAll(".hero-btn");
 if(nav){
     nav.classList.add("nav-animation");
-    if (catchphrase) {
-        catchphrase.classList.add("catchphrase-animation");
-    }
 
     const headings = document.querySelectorAll(".heading-primary");
     const headingDelay = 200;
     const heroDuration = headings.length * headingDelay;
+
+    setTimeout(() => {
+        catchphrase.classList.add("catchphrase-animation");
+    }, heroDuration + 200);
 
     setTimeout(() => {
         heroBtns.forEach(btn => {
