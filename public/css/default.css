@@ -22,6 +22,7 @@ body{
 main{
     flex:1;
 }
+
 .flex{
     display: flex;
 }
@@ -51,8 +52,8 @@ main{
     color: #fff;
     font-size: 18rem;
     line-height: 18rem;
+    transform: translateX(-200rem);
 }
-
 .heading-secondary{
     line-height: 6.5rem;
     letter-spacing: 0.5rem;

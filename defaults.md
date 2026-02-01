@@ -3,7 +3,8 @@
 
 ### Colors
 Main: #0984e3
-Light main: #0985e399
+Tints: #0985e399, #cee6f9
+
 Secondary: #546de5
 
 ### Images
