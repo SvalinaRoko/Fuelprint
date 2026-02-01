@@ -184,26 +184,26 @@ if(nav){
     };
     
 // ABOUT SECTION
-const firstsection = section[0];
+const aboutSection = section[0];
 
 const aboutImage = document.querySelector(".about-container .about-img");
-const aboutTitle = document.querySelector(".t");
-const aboutHeading = document.querySelector(".h");
-const aboutCopy = document.querySelector(".p");
+const aboutTitle = document.querySelector(".at");
+const aboutHeading = document.querySelector(".ah");
+const aboutCopy = document.querySelector(".ap");
 
-const sectionObserver = new IntersectionObserver((entries,observer) => {
+const aboutObserver = new IntersectionObserver((entries,observer) => {
     entries.forEach(entry => {
     if(entry.isIntersecting){
         setTimeout(()=>{
-            aboutImage.classList.add("img-animation");
+            aboutImage.classList.add("about-img-animation");
         },700)
-        aboutHeading.classList.add("text-animation");
+        aboutHeading.classList.add("about-text-animation");
         setTimeout(()=>{
-            aboutCopy.classList.add("text-animation");
+            aboutCopy.classList.add("about-text-animation");
         },700)
 
         setTimeout(() => {
-            aboutTitle.classList.add("title-animation");
+            aboutTitle.classList.add("about-title-animation");
         },500)
 
         observer.unobserve(entry.target);
@@ -212,6 +212,41 @@ const sectionObserver = new IntersectionObserver((entries,observer) => {
 },{
     threshold:0.5
 })
-sectionObserver.observe(firstsection);
+aboutObserver.observe(aboutSection);
+
+// FUNCTIONALITY SECTION
+const funcSection = section[1];
+
+const funcTitle = document.querySelectorAll(".ft");
+const funcHeading = document.querySelector('.fh');
+const functions = document.querySelectorAll('.f');
+const funcImages = document.querySelector(".fi");
+
+const funcObserver = new IntersectionObserver((entries,observer) => {
+    entries.forEach((entry)=>{
+        if(entry.isIntersecting){
+            funcTitle.forEach(item => {
+                setTimeout(()=>{
+                    item.classList.add("func-title-animation");
+                },680)
+            })
+
+            funcHeading.classList.add("func-heading-animation");
+
+            functions.forEach((func,index) => {
+                setTimeout(()=>{
+                    func.classList.add("function-animtion")
+                },index * 200)
+            })
+            setTimeout(()=>{
+                funcImages.classList.add("func-image-animation");
+            },300)
+
+            observer.unobserve(entry.target);
+        }
+    })
+},{threshold:0.5})
+
+funcObserver.observe(funcSection);
 
   
