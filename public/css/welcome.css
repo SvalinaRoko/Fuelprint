@@ -145,6 +145,9 @@
     justify-items: center;
     align-items: center;
 }
+.about-img{
+    transform: translateX(-200rem);
+}
 .about-info{
     max-width: 100rem;
     min-height: auto;
@@ -156,12 +159,32 @@
     padding: 0 2rem;
     line-height: 2.8rem;
 }
+.p{
+    transform: translateX(200rem);
+
+}
+.t{
+    opacity: 0;
+}
+.h{
+    transform: translateX(200rem);
+}
 .about-copy{
     max-width: 50rem;
     font-size: 2rem;
 }
-.about-img{
+.img-animation{
+    transform: translateX(0rem);
+    transition: transform  0.7s ease-in-out;
+}
+.text-animation{
+    transform: translateX(0rem);
+    transition: transform  0.7s ease-in-out;
 
+}
+.title-animation{
+    opacity: 1;
+    transition: opacity 500ms ease-in;
 }
 /* FUNCTIONALITY */
 /* NORMAL STATE*/
