@@ -46,6 +46,9 @@
         </div>
     </header>
     <main>
+        <section class="section" id="partners">
+            @yield('partners')
+        </section>
         <section class="section" id="about">
             @yield('about')
         </section>
@@ -58,7 +61,7 @@
         <section class="section" id="faq">
             @yield('faq')
         </section>
-        <section class="section">   
+        <section class="section" id="cta">   
             @yield("cta")
         </section>
     </main>
