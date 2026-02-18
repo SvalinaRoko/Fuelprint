@@ -5,6 +5,7 @@
 @push('styles')
 <link href="{{asset('css/default.css')}}" rel="stylesheet">
 <link href="{{asset('css/welcome.css')}}" rel="stylesheet">
+<link href="{{asset('css/welcome.queries.css')}}" rel="stylesheet">
 @endpush
 @section('nav-left-links')
 <li><a href="#about" class="btn-link" id="" aria-label="">About</a></li>
@@ -14,7 +15,7 @@
 @endsection
 @section('nav-right-links')
 <li><a href="#" class="btn-link" id="" aria-label="">Login</a></li>
-<li><a href="#" class="btn-link sign-up" id="" aria-label="">Sign up</a></li>
+<li><a href="#" class="btn-link cta" id="" aria-label="">Sign up</a></li>
 @endsection
 @section('hero-text')
 <div class="heading-box">
@@ -23,12 +24,12 @@
     <h1 class="heading-primary">with ease</h1>
     <div class="hero-copy">
         <div class="catchphrase-text">
-            <p class="catchphrase">Effortlessly Monitor Your Car’s Fueling Habits, Spend, and Efficiency – <span class="highlight">For Free!</span></p>
+            <p class="catchphrase">Effortlessly Monitor Your Car&apos;s Fueling Habits, Spend, and Efficiency &dash; For Free!</p>
         </div>
     </div>
 </div>
 <div class="hero-text-box nav-links">
-    <a href="#" class="btn sign-up hero-btn" >Sign up</a>
+    <a href="#" class="btn cta hero-btn" >Sign up</a>
     <a href="#about" class="btn btn-link hero-btn">Learn more</a>
 </div>
 @endsection
@@ -97,10 +98,19 @@
     </g>
 </svg>
 @endsection
+@section('partners')
+<div class="partners-container">
+    <div class="partners-logos">
+        <div class="partner">
+            
+        </div>
+    </div>
+</div>
+@endsection
 @section('about')
 <div class="about-container grid grid-2-cols">
     <div class="about-img">
-        <div class="placeholder" role="img" aria-label="Placeholder for functions section image" role="img"></div>
+        <div class="placeholder" id="about-img" role="img" aria-label="Placeholder for functions section image" role="img"></div>
     </div>
     <div class="about-info">
         <div class="section-heading">
@@ -162,9 +172,13 @@
                                 </svg>
                         </div>
                     </div>
-                    <div class="dd-functions-container closed">
-                        <p class="dd-copy">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore ipsa perspiciatis saepe illum eaque voluptas adipisci quisquam dolores quam dolorum?</p>
-                        <a href="#">Go here</a>
+                    <div class="dd-functions-container closed flex dir-col">
+                        <div>
+                            <p class="dd-copy">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore ipsa perspiciatis saepe illum eaque voluptas adipisci quisquam dolores quam dolorum?</p>
+                            <a href="#">Go here</a>
+                        </div>
+                        <div class="dropdownImg" id="dropdown-img-one" aria-label="a" role="img">
+                        </div>
                     </div>
                 </div>
              <!-- SECOND -->
@@ -184,9 +198,13 @@
                                 </svg>
                         </div>
                     </div>
-                    <div class="dd-functions-container closed" data-dropdown-content>
-                        <p class="dd-copy">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore ipsa perspiciatis saepe illum eaque voluptas adipisci quisquam dolores quam dolorum?</p>
-                        <a href="#">Go here</a>
+                    <div class="dd-functions-container closed flex dir-col">
+                        <div>
+                            <p class="dd-copy">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore ipsa perspiciatis saepe illum eaque voluptas adipisci quisquam dolores quam dolorum?</p>
+                            <a href="#">Go here</a>
+                        </div>
+                        <div class="dropdownImg" id="dropdown-img-two" aria-label="a" role="img">
+                        </div>
                     </div>
                 </div>
              <!-- THIRD -->
@@ -206,9 +224,13 @@
                                 </svg>
                         </div>
                     </div>
-                    <div class="dd-functions-container closed">
-                        <p class="dd-copy">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, laboriosam.</p>
-                        <a href="#">Go here</a>
+                    <div class="dd-functions-container closed flex dir-col">
+                        <div>
+                            <p class="dd-copy">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore ipsa perspiciatis saepe illum eaque voluptas adipisci quisquam dolores quam dolorum?</p>
+                            <a href="#">Go here</a>
+                        </div>
+                        <div class="dropdownImg" id="dropdown-img-three" aria-label="a" role="img">
+                        </div>
                     </div>
                 </div>
              <!-- FOURTH -->
@@ -228,10 +250,14 @@
                             </svg>
                     </div>
                 </div>
-                <div class="dd-functions-container closed">
-                    <p class="dd-copy">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore ipsa perspiciatis saepe illum eaque voluptas adipisci quisquam dolores quam dolorum?</p>
-                    <a href="#">Go here</a>
-                </div>
+                <div class="dd-functions-container closed flex dir-col">
+                        <div>
+                            <p class="dd-copy">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore ipsa perspiciatis saepe illum eaque voluptas adipisci quisquam dolores quam dolorum?</p>
+                            <a href="#">Go here</a>
+                        </div>
+                        <div class="dropdownImg" id="dropdown-img-four" aria-label="a" role="img">
+                        </div>
+                    </div>
             </div>
         </div>
     </div>
@@ -259,22 +285,22 @@
     <div class="values-container ">
         <div class="section-heading flex ">
             <div class="values-heading-box">
-                <div class="section-title flex">
+                <div class="section-title flex vt">
                     <div class="icon-box" role="img" aria-label="Star icon for values section">
                         <svg class="title-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
                             <path d="m229.5 113-63.4-23L143 26.4a16 16 0 0 0-30 0L90 89.9 26.4 113a16 16 0 0 0 0 30l63.4 23 23.1 63.5a16 16 0 0 0 30 0l23-63.4 63.5-23.1a16 16 0 0 0 0-30m-72.4 39.3a8 8 0 0 0-4.8 4.8L128 223.9l-24.3-66.8a8 8 0 0 0-4.8-4.8L32.1 128l66.8-24.3a8 8 0 0 0 4.8-4.8L128 32.1l24.3 66.8a8 8 0 0 0 4.8 4.8l66.8 24.3Z"/>
                         </svg>
                     </div>
-                    <span class="title">Values</span>
+                    <span class="title ">Values</span>
                 </div>
-                <div class="heading">
+                <div class="heading vh">
                     <h2 class="heading-secondary">What we offer</h2>
                 </div>
             </div>
         </div>
         <div class="values grid grid-3-cols">
             <!-- HABITS AND INSIGHT-->
-            <div class="habits">
+            <div class="habits vi">
                 <div class="value">
                     <div class="about-value">
                         <div class="icon flex" role="img" aria-label="Insight into fueling habits">
@@ -294,7 +320,7 @@
                 </div>
             </div>
             <!-- QUICK AND EASY TO USE -->
-            <div class="quick">
+            <div class="quick vi">
                 <div class="value">
                      <div class="about-value">
                         <div class="icon flex" role="img" aria-label="Quick and easy to use">
@@ -312,7 +338,7 @@
                 </div>
             </div>
             <!-- ALL IN ONE PLACE -->
-            <div class="place">
+            <div class="place vi">
                     <div class="value">
                         <div class="about-value">
                             <div class="icon flex" role="img" aria-label="All features in one place">    
@@ -336,7 +362,7 @@
     <div class="faq-container">
         <div class="section-heading flex ">
             <div class="faq-heading-box">
-                <div class="section-title flex">
+                <div class="section-title flex qt">
                     <div class="icon-box" role="img" aria-label="Information icon for frequently asked question section">
                         <svg class="title-icon" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 256 256">
                             <path d="M128 24a104 104 0 1 0 104 104A104 104 0 0 0 128 24m0 192a88 88 0 1 1 88-88 88 88 0 0 1-88 88m16-40a8 8 0 0 1-8 8 16 16 0 0 1-16-16v-40a8 8 0 0 1 0-16 16 16 0 0 1 16 16v40a8 8 0 0 1 8 8m-32-92a12 12 0 1 1 12 12 12 12 0 0 1-12-12"/>
@@ -344,14 +370,14 @@
                     </div>
                     <span class="title">FAQs</span>
                 </div>
-                <div class="heading">
+                <div class="heading qh">
                     <h2 class="heading-secondary">Your questions answered</h2>
                 </div>
             </div>
         </div>
         <div class="questions flex dir-col">
             <!-- FIRST QUESTION -->
-             <div class="question-nbr" id="Qone">
+             <div class="question-nbr qr" id="Qone">
                  <div class="question active-question flex">
                      <p class="question-text">Lorem ipsum d elit. Itaque minus delectus, eaque nisi velit optio id ex cumque ratione vero?</p>
                      <div  role="img" aria-label="Plus icon for faq section">
@@ -361,11 +387,11 @@
                         </div>
                     </div>  
                     <div class="dd-question-container closed">
-                        <P class="dd-question-copy">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo reprehenderit ipsa eligendi molestiae, dolorum ducimus! Vero atque minima expedita! Quia exercitationem, doloribus voluptatem quaerat sed corporis nihil dicta ullam repellendus sunt itaque ea enim omnis ex eum, nisi architecto excepturi!</P>
+                        <p class="dd-question-copy">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo reprehenderit ipsa eligendi molestiae, dolorum ducimus! Vero atque minima expedita! Quia exercitationem, doloribus voluptatem quaerat sed corporis nihil dicta ullam repellendus sunt itaque ea enim omnis ex eum, nisi architecto excepturi!</p>
                     </div>          
                 </div>
             <!-- SECOND QUESTION -->
-             <div class="question-nbr" id="Qtwo">
+             <div class="question-nbr ql" id="Qtwo">
                  <div class="question active-question flex">
                      <p class="question-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque minus delectus, eaque nisi velit optio id ex cumque ratione vero?</p>
                      <div role="img" aria-label="Plus icon for faq section">
@@ -375,11 +401,11 @@
                         </div>
                     </div>  
                     <div class="dd-question-container closed">
-                        <P class="dd-question-copy">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo reprehenderit ipsa eligendi molestiae, dolorum ducimus! Vero atque minima expedita! Quia exercitationem, doloribus voluptatem quaerat sed corporis nihil dicta ullam repellendus sunt itaque ea enim omnis ex eum, nisi architecto excepturi!</P>
+                        <p class="dd-question-copy">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo reprehenderit ipsa eligendi molestiae, dolorum ducimus! Vero atque minima expedita! Quia exercitationem, doloribus voluptatem quaerat sed corporis nihil dicta ullam repellendus sunt itaque ea enim omnis ex eum, nisi architecto excepturi!</p>
                     </div>          
                 </div>
             <!-- THIRD QUESTION -->
-             <div class="question-nbr" id="Qthree">
+             <div class="question-nbr qr" id="Qthree">
                  <div class="question active-question flex">
                      <p class="question-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque minus delectus, eaque nisi velit optio id ex cumque ratione vero?</p>
                      <div role="img" aria-label="Plus icon for faq section">
@@ -389,11 +415,11 @@
                         </div>
                     </div> 
                     <div class="dd-question-container closed">
-                        <P class="dd-question-copy">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo reprehenderit ipsa eligendi molestiae, dolorum ducimus! Vero atque minima expedita! Quia exercitationem, doloribus voluptatem quaerat sed corporis nihil dicta ullam repellendus sunt itaque ea enim omnis ex eum, nisi architecto excepturi!</P>
+                        <p class="dd-question-copy">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo reprehenderit ipsa eligendi molestiae, dolorum ducimus! Vero atque minima expedita! Quia exercitationem, doloribus voluptatem quaerat sed corporis nihil dicta ullam repellendus sunt itaque ea enim omnis ex eum, nisi architecto excepturi!</p>
                     </div>           
                 </div>
             <!-- FOURTH QUESTION -->
-             <div class="question-nbr" id="Qfour">
+             <div class="question-nbr ql" id="Qfour">
                  <div class="question active-question flex">
                      <p class="question-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque minus delectus, eaque nisi velit optio id ex cumque ratione vero?</p>
                      <div role="img" aria-label="Plus icon for faq section">
@@ -403,14 +429,21 @@
                     </div>
                 </div>
                 <div class="dd-question-container closed">
-                    <P class="dd-question-copy">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo reprehenderit ipsa eligendi molestiae, dolorum ducimus! Vero atque minima expedita! Quia exercitationem, doloribus voluptatem quaerat sed corporis nihil dicta ullam repellendus sunt itaque ea enim omnis ex eum, nisi architecto excepturi!</P>
+                    <p class="dd-question-copy">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo reprehenderit ipsa eligendi molestiae, dolorum ducimus! Vero atque minima expedita! Quia exercitationem, doloribus voluptatem quaerat sed corporis nihil dicta ullam repellendus sunt itaque ea enim omnis ex eum, nisi architecto excepturi!</p>
                 </div>
             </div>
         </div>
     </div>
 @endsection
 @section("cta")
-
+<div class="cta-container flex dir-col">
+    <div class="cta-content flex dir-col">
+        <h2 class='heading-secondary' id="cta-heading">Start today for free</h2>
+        <div class="hero-text-box nav-links">
+            <a href="#" class="btn cta hero-btn" id="footer-cta">Sign up</a>
+        </div>
+    </div>
+</div>
 @endsection
 @section('footer')
 <section class="section" id="footer">

@@ -43,11 +43,10 @@ document.addEventListener('click', (e) => {
         };
         
         const current = functionBlock.id;
-        console.log(current);
         
         Object.entries(images).forEach(([key,img]) => {
-            console.log(img);
             const isActive = key === current;
+            console.log(isActive);
             img.classList.toggle('show',isActive);
             img.classList.toggle('dissapear',!isActive);
         });
@@ -88,8 +87,7 @@ document.addEventListener('click', (e) => {
         Qthree:document.getElementById("Qthree"),
         Qfour:document.getElementById("Qfour")
     };
-    const currentQ = questionBlock.id;
-    console.log(currentQ);
+    const currentQ = questionBlock.id;;
 
     if(activeQuestion){
         const question = questionBlock.querySelector(".question");
@@ -151,6 +149,7 @@ function setFootprintAnimation(){
     });   
 }
 // ---------- ANIMATIONS ----------
+const sections = document.querySelectorAll("section");
 // HERO SECTION
 const nav = document.querySelector(".navigation");
 const catchphrase = document.querySelector(".catchphrase-text");
@@ -184,7 +183,7 @@ if(nav){
     };
     
 // ABOUT SECTION
-const aboutSection = section[0];
+const aboutSection = sections[0];
 
 const aboutImage = document.querySelector(".about-container .about-img");
 const aboutTitle = document.querySelector(".at");
@@ -215,7 +214,7 @@ const aboutObserver = new IntersectionObserver((entries,observer) => {
 aboutObserver.observe(aboutSection);
 
 // FUNCTIONALITY SECTION
-const funcSection = section[1];
+const funcSection = sections[1];
 
 const funcTitle = document.querySelectorAll(".ft");
 const funcHeading = document.querySelector('.fh');
@@ -249,4 +248,67 @@ const funcObserver = new IntersectionObserver((entries,observer) => {
 
 funcObserver.observe(funcSection);
 
-  
+// VALUES SECTION
+const valuesSection = sections[2];
+
+const valuesTitle = document.querySelector(".vt");
+const valuesHeading = document.querySelector(".vh");
+const valuesItems = document.querySelectorAll(".vi");
+
+const valuesObserver = new IntersectionObserver((entries,observer)=>{
+    entries.forEach(entry =>{
+        if(entry.isIntersecting){
+            setTimeout(()=>{
+                valuesTitle.classList.add("values-title-animation");
+            },600)
+
+            valuesHeading.classList.add("values-heading-animation");
+
+            valuesItems.forEach((item,index) => {
+                const delay = (valuesItems.length - 1 - index) * 200;
+                setTimeout(()=>{
+                    item.classList.add("values-item-animation")
+                },delay)
+            })
+        }
+    })
+},{
+    threshold:0.1
+})
+
+valuesObserver.observe(valuesSection);
+
+// FAQ SECTION
+const faqSection = sections[3];
+
+const faqTitle = document.querySelector(".qt");
+const faqHeading = document.querySelector(".qh");
+const faqRight = document.querySelectorAll(".qr");
+const faqLeft = document.querySelectorAll(".ql");
+
+const faqObserver = new IntersectionObserver((entries,observer)=>{
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            faqTitle.classList.add("questions-title-animation");
+            faqHeading.classList.add("questions-heading-animation");
+
+            const allQuestions = [...faqLeft, ...faqRight];
+            allQuestions.forEach((q,k) => {
+                const delay = [300,600,100,500];
+                setTimeout(()=>{
+                    q.classList.add("questions-animation")
+                },delay[k] ?? 0)
+            })
+
+
+            }
+        });
+    }, {
+        threshold: 0.5
+    });
+    
+
+faqObserver.observe(faqSection);
+// CTA
+
+
