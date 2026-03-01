@@ -149,7 +149,7 @@
 </div>
 @endsection
 @section('functionality')
-<div class="func-container grid grid-2-cols">
+<div class="func-container grid grid-2-cols nospace ">
     <div class="func-info-container">
         <div class="section-heading flex ">
             <div class="values-heading-box">
@@ -451,11 +451,13 @@
     </div>
 @endsection
 @section("cta")
-<div class="cta-container flex dir-col">
-    <div class="cta-content flex dir-col">
-        <h2 class='heading-secondary' id="cta-heading">Start today for free</h2>
-        <div class="hero-text-box nav-links">
-            <a href="#" class="btn cta hero-btn" id="footer-cta">Sign up</a>
+<div class="cta-container">
+    <div class="cta-bg flex">
+        <div class="cta-content flex dir-col">
+            <h2 class='heading-secondary' id="cta-heading">Start today for free</h2>
+            <div class="hero-text-box nav-links">
+                <a href="#" class="btn cta hero-btn" id="footer-cta">Sign up</a>
+            </div>
         </div>
     </div>
 </div>

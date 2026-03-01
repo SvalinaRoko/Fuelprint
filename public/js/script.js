@@ -1,4 +1,26 @@
 // FUNCTIONS SECTION DROPDOWN
+function updateContainerSpacing() {
+    const mq = window.matchMedia("(max-width:1231px)");
+    const funcContainer = document.querySelector(".func-container");
+
+    if (!funcContainer) return;
+
+    if (!mq.matches) {
+        funcContainer.classList.remove("space");
+        return;
+    }
+
+    const anyOpen = document.querySelector(".func-nbr .function.opened");
+
+    if (anyOpen) {
+        funcContainer.classList.add("space");
+        funcContainer.classList.remove("nospace");
+
+    } else {
+        funcContainer.classList.remove("space");
+        funcContainer.classList.add("nospace");
+    }
+}
 document.addEventListener('click', (e) => {
     const active = e.target.closest(".active-btn");
     const functionBlock= e.target.closest(".func-nbr");
@@ -13,6 +35,7 @@ document.addEventListener('click', (e) => {
         return;
     }
 
+
     if(active){
         const bar = functionBlock.querySelector(".function");
         const content = functionBlock.querySelector(".dd-functions-container");
@@ -21,18 +44,18 @@ document.addEventListener('click', (e) => {
         closeAll(functionBlock);
 
         functionBlock.classList.toggle("spaceBottom");
+        
 
         bar.classList.toggle('opened');
         bar.classList.toggle('closed');
         content.classList.toggle('closed');
         content.classList.toggle('opened');
         arrow.classList.toggle('rotate')
+
+        updateContainerSpacing();
     }
 
     if(active){
-        if(!active){
-            return;
-        }
 
         const images = {
             default:document.getElementById('img-default'),
@@ -67,6 +90,7 @@ function closeAll(except = null) {
         fn.querySelector(".dd-functions-container")?.classList.remove("opened");
         fn.querySelector(".dd-functions-container")?.classList.add("closed");
         fn.querySelector(".down-arr")?.classList.remove("rotate");
+        updateContainerSpacing();
     }});
 }
 });
@@ -340,5 +364,3 @@ const faqObserver = new IntersectionObserver((entries,observer)=>{
 
 faqObserver.observe(faqS);
 // CTA
-
-
