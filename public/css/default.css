@@ -25,6 +25,12 @@ body{
 main{
     flex:1;
 }
+.show{
+    display: block;
+}
+.hide{
+    display: none !important;
+}
 .flex{
     display: flex;
 }
