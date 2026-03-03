@@ -1,3 +1,105 @@
+// MOBILE NAVIGATION 
+
+function showButton(){
+    const isMobile = window.matchMedia("(max-width:920px)").matches;
+    const brgerBtn = document.querySelector(".buttonMobile");
+    const mobileCta = document.querySelector(".mobile-cta");
+    
+    if(!brgerBtn){
+        return;
+    }
+    if(isMobile){
+        mobileCta.classList.remove("hide");
+        
+        brgerBtn.classList.remove("hide");
+        brgerBtn.classList.add("show");
+    }else {
+        mobileCta.classList.add("hide");
+
+        brgerBtn.classList.remove("show");
+        brgerBtn.classList.add("hide");
+
+    }
+}
+showButton();
+window.addEventListener("resize", function() {
+    showButton();
+});
+
+function enableMobileNav(){
+
+    const mobileBtn = document.querySelector(".buttonMobile");
+    const brger = document.querySelector(".brger");
+    const linksNav = document.querySelector(".left-links");
+    const nav = document.querySelector(".navigation");
+    const rightLinks = document.querySelector(".right-links");
+    const allRightButtons = Array.from(rightLinks.children);
+    const firstLink = allRightButtons[0];
+
+    if(!mobileBtn){
+        return;
+    }
+    mobileBtn.addEventListener('click',() => {
+        const isOpened = mobileBtn.getAttribute("aria-expanded");
+        if(isOpened == 'false'){
+            mobileBtn.setAttribute("aria-expanded", true);
+
+            brger.setAttribute("stroke","#0984e3");
+            
+            linksNav.classList.add("moveLinksDown");
+
+            nav.classList.add("backgroundToWhite");
+
+            firstLink.classList.add("hide");
+
+        }else{
+            mobileBtn.setAttribute("aria-expanded", false);
+
+            brger.setAttribute("stroke","#fff");
+
+            linksNav.classList.remove("moveLinksDown");
+
+            nav.classList.remove("backgroundToWhite");
+
+            firstLink.classList.remove("hide");
+        }
+    })
+    const closeMobileNav = new IntersectionObserver((entries,observer) => {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) {
+                mobileBtn.setAttribute("aria-expanded", false);
+                brger.setAttribute("stroke","#fff");
+                linksNav.classList.remove("moveLinksDown");
+                nav.classList.remove("backgroundToWhite");
+                firstLink.classList.remove("hide");
+            }
+          });
+        }, {
+          threshold: 0,  
+        });
+        
+        closeMobileNav.observe(nav);
+
+        document.addEventListener("click", (e) => {
+            const isOpened = mobileBtn.getAttribute("aria-expanded");
+            
+            if (isOpened === "false") return;
+            
+            if (nav.contains(e.target) || mobileBtn.contains(e.target)) {
+                return;
+            }
+            mobileBtn.setAttribute("aria-expanded", false);
+            brger.setAttribute("stroke", "#fff");
+            linksNav.classList.remove("moveLinksDown");
+            nav.classList.remove("backgroundToWhite");
+            firstLink.classList.remove("hide");
+        });
+}
+enableMobileNav();
+
+
+
+
 // FUNCTIONS SECTION DROPDOWN
 function updateContainerSpacing() {
     const mq = window.matchMedia("(max-width:1231px)");
@@ -69,7 +171,6 @@ document.addEventListener('click', (e) => {
         
         Object.entries(images).forEach(([key,img]) => {
             const isActive = key === current;
-            console.log(isActive);
             img.classList.toggle('show',isActive);
             img.classList.toggle('dissapear',!isActive);
         });
@@ -148,6 +249,8 @@ for (const link of navLinks){
 }
 
 function smoothScroll (event){
+    const href = this.getAttribute("href");
+    if (href === "#" || href === "") return;
     event.preventDefault();
     const targetId = this.getAttribute("href");
     const targetElement = document.querySelector(targetId);
@@ -223,7 +326,6 @@ function addAnimation() {
 
         const scrollerInner = scroller.querySelector(".partners-logos");
         const scrollerContent = Array.from(scrollerInner.children);
-        console.log(scrollerContent);
 
         scrollerContent.forEach(item => {
             const duplicatedItem = item.cloneNode(true);
@@ -363,4 +465,5 @@ const faqObserver = new IntersectionObserver((entries,observer)=>{
     
 
 faqObserver.observe(faqS);
-// CTA
+
+
