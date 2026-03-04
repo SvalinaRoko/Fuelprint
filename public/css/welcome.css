@@ -682,7 +682,7 @@ justify-content: center;
     align-items: center;
 
     margin:0 auto;
-    padding: 5rem 1rem;
+    padding: 5rem 0;
 }
 .cta-bg{
     justify-content: center;
@@ -701,7 +701,7 @@ justify-content: center;
           mask: var(--mask);
           
     animation: moveMask 10s linear infinite;
-    background: linear-gradient(to right, rgba(255,255,255,0.1),rgba(9, 133, 227, 0.60),rgba(9, 133, 227, 0.60),rgb(255, 255, 255,0.1));
+    background: linear-gradient(to right, rgba(9, 133, 227, 0.40),rgba(9, 133, 227, 0.60),rgba(9, 133, 227, 0.60),rgba(9, 133, 227, 0.4));
 }
 .cta-content{
     gap:8rem;
