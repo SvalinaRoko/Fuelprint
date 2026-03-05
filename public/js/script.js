@@ -4,6 +4,7 @@ function showButton(){
     const isMobile = window.matchMedia("(max-width:920px)").matches;
     const brgerBtn = document.querySelector(".buttonMobile");
     const mobileCta = document.querySelector(".mobile-cta");
+
     
     if(!brgerBtn){
         return;
@@ -13,6 +14,7 @@ function showButton(){
         
         brgerBtn.classList.remove("hide");
         brgerBtn.classList.add("show");
+
     }else {
         mobileCta.classList.add("hide");
 
@@ -39,31 +41,36 @@ function enableMobileNav(){
     if(!mobileBtn){
         return;
     }
+    function closeNav() {
+        mobileBtn.setAttribute("aria-expanded", false);
+        brger.setAttribute("stroke", "#fff");
+        linksNav.classList.remove("moveLinksDown");
+        nav.classList.remove("backgroundToWhite");
+        firstLink.classList.remove("hide");
+    }
+
+    function openNav(){
+        mobileBtn.setAttribute("aria-expanded", true);
+        brger.setAttribute("stroke","#0984e3");
+        linksNav.classList.add("moveLinksDown");
+        nav.classList.add("backgroundToWhite");
+        firstLink.classList.add("hide");
+    }
+
     mobileBtn.addEventListener('click',() => {
         const isOpened = mobileBtn.getAttribute("aria-expanded");
         if(isOpened == 'false'){
-            mobileBtn.setAttribute("aria-expanded", true);
-
-            brger.setAttribute("stroke","#0984e3");
-            
-            linksNav.classList.add("moveLinksDown");
-
-            nav.classList.add("backgroundToWhite");
-
-            firstLink.classList.add("hide");
-
+            openNav();
         }else{
-            mobileBtn.setAttribute("aria-expanded", false);
-
-            brger.setAttribute("stroke","#fff");
-
-            linksNav.classList.remove("moveLinksDown");
-
-            nav.classList.remove("backgroundToWhite");
-
-            firstLink.classList.remove("hide");
+            closeNav();
         }
     })
+
+    window.addEventListener("resize", () => {
+        if (window.innerWidth > 920) {
+            closeNav(); 
+    }})
+
     const closeMobileNav = new IntersectionObserver((entries,observer) => {
         entries.forEach(entry => {
             if (!entry.isIntersecting) {
@@ -94,6 +101,7 @@ function enableMobileNav(){
             nav.classList.remove("backgroundToWhite");
             firstLink.classList.remove("hide");
         });
+
 }
 enableMobileNav();
 

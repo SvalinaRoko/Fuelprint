@@ -33,6 +33,12 @@
                     <ul class="nav-links flex" id="left-links">
                         @yield('nav-left-links')
                     </ul>
+                    <div class="mobile-cta-container ">
+                        <ul class=" mobile-cta flex dir-col ">
+                            <li><a href="#" class="mobile-cta-links" id="mobile-login" aria-label="">Login</a></li>
+                            <li><a href="#" class="mobile-cta-links" id="mobile-cta" aria-label="">Sign up</a></li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="right-links flex">
                     <!-- TODO-->

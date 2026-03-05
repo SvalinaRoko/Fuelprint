@@ -8,16 +8,10 @@
 <link href="{{asset('css/welcome.queries.css')}}" rel="stylesheet">
 @endpush
 @section('nav-left-links')
-<li><a href="#about" class="btn-link" id="nav-link" aria-label="">About</a></li>
-<li><a href="#functionality" class="btn-link" id="nav-link" aria-label="">How it works</a></li>
-<li><a href="#values" class="btn-link" id="nav-link" aria-label="">What we offer</a></li>
-<li><a href="#faq" class="btn-link" id="nav-link" aria-label="">FaQ</a></li>
-<div class="mobile-cta-container flex ">
-    <ul class=" mobile-cta flex dir-col">
-        <li><a href="#" class="btn-link" id="mobile-login" aria-label="">Login</a></li>
-        <li><a href="#" class="btn-link cta" id="mobile-cta" aria-label="">Sign up</a></li>
-    </ul>
-</div>
+<li><a href="#about" class="btn-link" id="link-about" aria-label="">About</a></li>
+<li><a href="#functionality" class="btn-link" id="link-func" aria-label="">How it works</a></li>
+<li><a href="#values" class="btn-link" id="link-values" aria-label="">What we offer</a></li>
+<li><a href="#faq" class="btn-link" id="link-faq" aria-label="">FaQ</a></li>
 @endsection
 @section('nav-right-links')
 <li><a href="#" class="btn-link" id="login-btn" aria-label="">Login</a></li>
@@ -411,7 +405,7 @@
                 </div>
             </div>
             <div class="dd-question-container closed">
-                <p class="dd-question-copy">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo reprehenderit ipsa eligendi molestiae, dolorum ducimus! Vero atque minima expedita! Quia exercitationem, doloribus voluptatem quaerat sed corporis nihil dicta ullam repellendus sunt itaque ea enim omnis ex eum, nisi architecto excepturi!</p>
+                <p class="dd-question-copy">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse facere pariatur quas est aspernatur nostrum.</p>
             </div>
         </div>
         <!-- SECOND QUESTION -->
@@ -425,7 +419,7 @@
                 </div>
             </div>
             <div class="dd-question-container closed">
-                <p class="dd-question-copy">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo reprehenderit ipsa eligendi molestiae, dolorum ducimus! Vero atque minima expedita! Quia exercitationem, doloribus voluptatem quaerat sed corporis nihil dicta ullam repellendus sunt itaque ea enim omnis ex eum, nisi architecto excepturi!</p>
+                <p class="dd-question-copy">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab maxime tenetur perspiciatis pariatur, ad nisi doloremque facilis! Obcaecati nihil facilis fuga illo, exercitationem quibusdam quod.</p>
             </div>
         </div>
         <!-- THIRD QUESTION -->
@@ -453,7 +447,7 @@
                 </div>
             </div>
             <div class="dd-question-container closed">
-                <p class="dd-question-copy">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo reprehenderit ipsa eligendi molestiae, dolorum ducimus! Vero atque minima expedita! Quia exercitationem, doloribus voluptatem quaerat sed corporis nihil dicta ullam repellendus sunt itaque ea enim omnis ex eum, nisi architecto excepturi!</p>
+                <p class="dd-question-copy">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae ipsa quibusdam libero, magnam distinctio dolores!</p>
             </div>
         </div>
     </div>
