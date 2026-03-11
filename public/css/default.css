@@ -5,11 +5,16 @@
 }
 :root{
     --section-spacing: 20rem auto;
+    --main-tint: rgba(9,133,227,0.3);
+    --main-color: #0984e3;
+    --secondary-color: #546de5;
 }
 html{
     font-size: 62.5%;
 }
 body{
+    display: flex;
+    flex-direction: column;
     position: relative;
     min-height: 100vh;
     font-size: 1.4rem;

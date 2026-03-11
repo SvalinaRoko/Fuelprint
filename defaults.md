@@ -3,7 +3,7 @@
 
 ### Colors
 Main: #0984e3
-Tints: #0985e399, #cee6f9
+Tints: #cee6f9,rgba(9,133,227,0.3);
 
 Secondary: #546de5
 
