@@ -22,3 +22,12 @@ class AppServiceProvider extends ServiceProvider
         //
     }
 }
+
+// protected function prepareForValidation()
+// {
+//     $this->merge([
+//         'name' => trim($this->name),
+//         'surname' => trim($this->surname),
+//         'email' => trim($this->email),
+//     ]);
+// }

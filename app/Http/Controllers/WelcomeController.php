@@ -2,11 +2,20 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use Illuminate\Routing\Controller;
 
 class WelcomeController extends Controller
 {
-    function welcome(){
-        return view('welcome');
+    public function welcome()
+    {
+        return view('pages.landing');
+    }
+    public function showLogin()
+    {
+        return view('auth.login');
+    }
+    public function showRegister()
+    {
+        return view('auth.register');
     }
 }

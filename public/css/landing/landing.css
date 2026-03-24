@@ -52,6 +52,16 @@
     color: #333;
     font-size: 1.6rem;
     text-decoration:none;
+    transition: 0.5s;
+    position: relative;
+    transform: scale(0);
+}
+.left-links li:nth-child(-n+4) .btn-link:hover,
+.left-links li:nth-child(-n+4) .btn-link:active,
+li #login-btn:hover,
+li #login-btn:active{
+    color: var(--main-color);
+    box-shadow: 0 3px 0 #0984e3;
 }
 .heading-box{ 
     padding:0  1rem;
@@ -80,12 +90,12 @@
     transition: opacity 1s ease-in;
 }
 .catchphrase{
-    color: #0984e3;
+    color: var(--main-color);
     font-size: 2.8rem;
     font-weight: 700;
 }
 .highlight{
-    color: #0984e3;
+    color: var(--main-color);
 }
 .hero-text-box{
     max-width:fit-content;
@@ -114,20 +124,20 @@
 }
 .btn:hover,
 .btn:active{
-    background-color:#546de5;
+    background-color:var(--secondary-color);
     color: #fff;
+}
+.cta{
+    transition: all 600ms;
+    background-color: var(--main-color);
+    color: #fff;
+    margin-right:2rem ;
 }
 .cta:hover,
 .cta:active{
     background-color:#fff;
     box-shadow: inset #0984e3 0px 0px 0px 2px ;
-    color: #0984e3;
-}
-.cta{
-    transition: all 600ms;
-    background-color: #0984e3;
-    color: #fff;
-    margin-right:2rem ;
+    color: var(--main-color);
 }
 .nav-links .cta{
     padding: 0.5em;
@@ -406,8 +416,8 @@ justify-content: center;
     pointer-events: all;
     height: auto;
 
-    transition: opacity 500ms ease;
-    transition-delay: 200ms;
+    transition: opacity 500ms ease, height 500ms ease;
+    transition-delay: 500ms;
 
     box-shadow: 8px 8px 10px 0 rgba(0,0,0,0.03);
     border-radius:1rem ;
@@ -437,7 +447,7 @@ justify-content: center;
     display: none;
     width: 40rem;
     height: 40rem;
-    background-color: #0984e3;
+    background-color: var(--main-color);
     z-index: 999;
 }
 .func-nbr.spaceBottom{
@@ -531,7 +541,7 @@ justify-content: center;
 }
 .value-text{
     text-wrap: wrap;
-    width: 100%;
+    max-width: 100%;
 }
 .image-box{  
     box-shadow: 10px 10px 20px rgba(0,0,0,0.3);  
@@ -564,7 +574,7 @@ justify-content: center;
 /* FAQ  */
 .faq-container{
     max-width: 160rem;
-    min-height: 90rem;
+    height: 110rem;
     margin: var(--section-spacing);
 }
 .questions{
@@ -580,15 +590,13 @@ justify-content: center;
     align-items: center;
 }
 .question-nbr{
-    position: relative;
-    margin-bottom: 4rem;
+    margin-bottom: 0rem;
     transition: margin-bottom 200ms ease-in;
-
 }
 .question:hover,
 .question:active{
     cursor: pointer;
-    background-color:#cee6f9;
+    background-color:var(--main-tint);
 }
 .question-text{
     max-width: 100%;
@@ -606,11 +614,8 @@ justify-content: center;
 .dd-question-container{
     margin:0 2rem;
     padding: 3.5rem 2rem 3rem 2rem;
-    background-color:#cee6f9;
+    background-color:var(--main-tint);
     border-radius:0 0 2rem 2rem ;
-
-    position: absolute;
-
     
     opacity: 1;
     pointer-events: all;
@@ -619,16 +624,20 @@ justify-content: center;
     transform: translateY(0rem);
     transition-delay: 250ms;
     transition-property: transform,opacity;
-    transition-duration: 200ms;
+    transition-duration: 400ms;
 }
 .borderRadius{
     border-radius: 2rem 2rem 0 0;
-    background-color:#cee6f9;
+    background-color:var(--main-tint);
 
 }
+.question-nbr.noSpace{
+    margin-bottom: 0rem;
+    transition: margin-bottom 500ms ease;
+}
 .question-nbr.spaceBottom{
-    margin-bottom: 12rem;
-    transition: margin-bottom 200ms ease-out;
+    margin-bottom: 5rem;
+    transition: margin-bottom 500ms ease;
 }
 .dd-question-copy{
     font-size: 1.8rem;
@@ -637,7 +646,7 @@ justify-content: center;
 
     transition-delay: 0ms;
     transition-property: opacity;
-    transition-duration:200ms;
+    transition-duration:500ms;
 
     opacity: 0;
     pointer-events: none;
@@ -674,15 +683,12 @@ justify-content: center;
 }
 /* CTA */
 .cta-container{
-
     max-width: 100vw;
     min-height: 50rem;
 
     justify-content: center;
     align-items: center;
-
-    margin:0 auto;
-    padding: 5rem 1rem;
+    padding: 5rem 0;
 }
 .cta-bg{
     justify-content: center;
@@ -701,7 +707,7 @@ justify-content: center;
           mask: var(--mask);
           
     animation: moveMask 10s linear infinite;
-    background: linear-gradient(to right, rgba(255,255,255,0.1),rgba(9, 133, 227, 0.60),rgba(9, 133, 227, 0.60),rgb(255, 255, 255,0.1));
+    background: linear-gradient(to right, rgba(9, 133, 227, 0.40),rgba(9, 133, 227, 0.60),rgba(9, 133, 227, 0.60),rgba(9, 133, 227, 0.4));
 }
 .cta-content{
     gap:8rem;
@@ -761,7 +767,7 @@ justify-content: center;
 .footer-container{
     padding: 10rem 2rem 0 2rem;
     max-width: 70rem;
-    margin: 20rem auto 10rem auto;
+    margin: var(--section-spacing);
     gap: 5rem;
 
     justify-content: center;
@@ -780,6 +786,7 @@ justify-content: center;
 }
 .social{
     justify-content: space-between;
+
 }
 .social-icon{
     width: 3.3rem;
