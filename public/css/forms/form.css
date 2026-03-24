@@ -25,15 +25,25 @@ body{
     gap: 5rem;
     justify-self: start;
 }
+.form-content .register{
+    min-height: 85rem;
+}
 #form-heading{
+    line-height: 4rem;
     color: #0984e3;
     font-size: 4rem;
     letter-spacing: 0.3rem;
 }
-.email-box,
-.password-box{
+.form-box{
+    position: relative;
     gap: 0.5rem;
     margin-bottom: 4rem;
+}
+.form-box#login-password-input{
+    margin-bottom: 0;
+}
+.remember-btn{
+    margin: 2.5rem 0rem 2rem 0;
 }
 .email-input,
 .password-input{
@@ -64,6 +74,16 @@ body{
     background-color:#fff;
     box-shadow: inset #0984e3 0px 0px 0px 2px ;
     color: var(--main-color);
+}
+.conditions{
+    color: rgba(51, 51, 51, 0.85);  
+    padding-left:2rem;
+}
+.falseInput{
+    color: red;
+}
+.trueInput{
+    color: #0984e3;
 }
 /* FOOTER */
 .footer-container{

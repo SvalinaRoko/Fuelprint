@@ -10,12 +10,12 @@ class WelcomeController extends Controller
     {
         return view('pages.landing');
     }
-    public function login()
+    public function showLogin()
     {
-        return view('forms.login');
+        return view('auth.login');
     }
-    public function register()
+    public function showRegister()
     {
-        return view('forms.register');
+        return view('auth.register');
     }
 }

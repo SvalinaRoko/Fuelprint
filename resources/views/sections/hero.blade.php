@@ -10,7 +10,8 @@
         </div>
     </div>
     <div class="hero-text-box nav-links">
-        <a href="{{route('register')}}" class="btn cta hero-btn">Sign up</a>
+        <a href="{{route('show.register')}}" class="btn cta hero-btn">Sign up</a>
+        <a href="{{route('show.main')}}" class="btn cta hero-btn" style="background-color:red;">DELETE</a>
         <a href="#about" class="btn btn-link hero-btn">Learn more</a>
     </div>
 </section>

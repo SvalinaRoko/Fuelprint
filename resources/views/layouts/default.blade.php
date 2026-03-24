@@ -1,3 +1,6 @@
+<?php
+require '/Users/svalina-roko/Desktop/fuelprint/database/core/Database.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,7 +23,9 @@
         @yield('content')
     </main>
 
+    @if(!($hideFooter ?? false))
     @include('partials.footer')
+    @endif
 
     @stack('scripts')
 </body>

@@ -1,31 +1,47 @@
-// HERO SECTION
-const nav = document.querySelector(".navigation");
-const catchphrase = document.querySelector(".catchphrase-text");
-const heroBtns = document.querySelectorAll(".hero-btn");
-if(nav){
-    nav.classList.add("nav-animation");
+// INPUT FIELDS CHECKING
 
-    const headings = document.querySelectorAll(".heading-primary");
-    const headingDelay = 200;
-    const heroDuration = headings.length * headingDelay;
+const passwordInput = document.querySelector('.password-input');
+const conditionLenght = document.querySelector('.cond-caracters');
+const conditionSymbols = document.querySelector('.cond-symbols');
+const conditionNumbers = document.querySelector('.cond-numbers');
+const conditions = [conditionLenght,conditionSymbols,conditionNumbers]
 
-    setTimeout(() => {
-        catchphrase.classList.add("catchphrase-animation");
-    }, heroDuration + 200);
+passwordInput.addEventListener('input', checkInput);
 
-    setTimeout(() => {
-        heroBtns.forEach(btn => {
-            btn.classList.add("hero-btn-animation");
-        });
-    }, heroDuration + 200);
+function checkInput() {
+    const value = passwordInput.value;
+    const hasNumber = value.match(/[0-9]/g);
+    const hasSymbol = value.match(/^.*[!@#$%^&*()_+\=\[\]{};':"\\|,.<>\/?-].*$/);
+    const noSpace = !/\s/.test(value);
 
-    headings.forEach((heading, index) => {
-        setTimeout(() => {
-                heading.classList.add("heading-animation");
-            },index * headingDelay)
-        })
+if(value){
+    if (value.length >= 8) {
+        conditionLenght.classList.remove('falseInput');
+        conditionLenght.classList.add('trueInput');
+    } else{
+        conditionLenght.classList.add('falseInput');
+        conditionLenght.classList.remove('trueInput');
+    }
 
-        setTimeout(() => {
-            setFootprintAnimation();
-        },heroDuration + 200)
-    };
+    if (hasNumber) {
+        conditionNumbers.classList.remove('falseInput');
+        conditionNumbers.classList.add('trueInput');
+    } else{
+        conditionNumbers.classList.add('falseInput');
+        conditionNumbers.classList.remove('trueInput');
+    }
+
+    if (hasSymbol && noSpace) {
+        conditionSymbols.classList.remove('falseInput');
+        conditionSymbols.classList.add('trueInput');
+    } else{
+        conditionSymbols.classList.add('falseInput');
+        conditionSymbols.classList.remove('trueInput');
+    }
+}else{
+    conditions.forEach(con => {
+        con.classList.remove('falseInput');
+        con.classList.remove('trueInput');
+    })
+}
+}

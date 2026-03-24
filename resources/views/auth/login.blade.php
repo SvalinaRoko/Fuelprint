@@ -13,7 +13,7 @@ $hideNav = true;
 @endphp
 
 @section('content')
-<div class="form-container grid grid-2-cols">
+<div class="form-container login grid grid-2-cols">
     <div class=" logo-container" id="form"><a href="{{route('welcome')}}" aria-label="Fuelprint logo" role="img">
             <svg class="logo" xmlns="http://www.w3.org/2000/svg" id="Layer_1" width="600" height="100" viewBox="0 0 400 100">
                 <defs>
@@ -30,22 +30,28 @@ $hideNav = true;
     <div class="form-content flex dir-col">
         <div class="form-heading">
             <h2 class="heading-secondary" id="form-heading">Login</h2>
-            <p>New user? <a href="{{route('register')}}">Create an account</a></p>
+            <p>New user? <a href="{{route('show.register')}}">Create an account</a></p>
         </div>
         <div class="auth-form">
-            <form href="" method="POST" action="" class="flex dir-col">
+            <form method="POST" action="{{route('login')}}" class="flex dir-col">
                 @csrf
-                <div class="email-box flex dir-col">
+                <div class="form-box flex dir-col">
                     <label for="email">Email address</label>
                     <input type="text" class="email-input" name="email" value="{{old('email')}}">
+                    @error('email')
+                    <p class="error-message">{{ $message }}</p>
+                    @enderror
                 </div>
-                <div class="password-box flex dir-col">
-                    <label for="pass">Password</label>
-                    <input type="password" class="password-input" name="pass">
-                    <div class="remember-btn">
-                        <input type="checkbox" id="remember" name="credentials" value="remember" checked>
-                        <label for="remember">Remember me</label>
-                    </div>
+                <div class="form-box flex dir-col" id="login-password-input">
+                    <label for="password">Password</label>
+                    <input type="password" class="password-input" name="password">
+                    @error('password')
+                    <p class="error-message">{{ $message }}</p>
+                    @enderror
+                </div>
+                <div class="remember-btn">
+                    <input type="checkbox" id="remember" name="credentials" value="remember" checked>
+                    <label for="remember">Remember me</label>
                 </div>
                 <input type="submit" value="Login" class="form-btn" id="">
             </form>

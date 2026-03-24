@@ -1,6 +1,6 @@
 @extends('layouts.default')
 
-@section('title', 'Fuelprint — Home')
+@section('title', 'Fuelprint')
 
 @push('styles')
 <link rel="stylesheet" href="{{ asset('css/default.css') }}">
@@ -15,14 +15,14 @@
 <li><a href="#faq" class="btn-link" id="nav-link" aria-label="">FaQ</a></li>
 <div class="mobile-cta-container flex ">
     <ul class=" mobile-cta flex dir-col">
-        <li><a href="{{route('login')}}" class="btn-link" id="mobile-login" aria-label="Login button">Login</a></li>
-        <li><a href="{{route('register')}}" class="btn-link cta" id="mobile-cta" aria-label="">Sign up</a></li>
+        <li><a href="{{route('show.login')}}" class="btn-link" id="mobile-login" aria-label="Login button">Login</a></li>
+        <li><a href="{{route('show.register')}}" class="btn-link cta" id="mobile-cta" aria-label="">Sign up</a></li>
     </ul>
 </div>
 @endsection
 @section('nav-right-links')
-<li><a href="{{route('login')}}" class="btn-link" id="login-btn" aria-label="Login button">Login</a></li>
-<li><a href="{{route('register')}}" class="btn-link cta" id="register-button" aria-label="">Sign up</a></li>
+<li><a href="{{route('show.login')}}" class="btn-link" id="login-btn" aria-label="Login button">Login</a></li>
+<li><a href="{{route('show.register')}}" class="btn-link cta" id="register-button" aria-label="">Sign up</a></li>
 @endsection
 
 @section('hero')

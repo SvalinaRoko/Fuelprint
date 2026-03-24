@@ -2,67 +2,55 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\PostFormRequest;
+use App\Http\Requests\LoginFormRequest;
+use App\Http\Requests\RegisterFormRequest;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
-class AuthControllerr extends Controller
+class AuthController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
-    public function index()
+    public function register(RegisterFormRequest $request)
     {
-        return view("pages.main");
+
+        $user = User::create([
+            'name' => $request->validated()['name'],
+            'surname' => $request->validated()['surname'],
+            'email' => strtolower($request->validated()['email-register']),
+            'password' => Hash::make($request->validated()['password'])
+        ]);
+
+        Auth::login($user);
+
+        return redirect()->route('show.main');
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create(PostFormRequest $request)
+    public function login(LoginFormRequest $request)
     {
-        $user = Auth::user();
-        var_dump($user);
+        $credentials = $request->only('email', 'password');
+
+        if (Auth::attempt($credentials)) {
+            $request->session()->regenerate();
+
+            return redirect()->route('show.main');
+        }
+
+        return back()->withErrors([
+            'email' => 'Email is not valid.',
+            'password' => 'Password is not valid.',
+        ])->onlyInput('email', 'password');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
+    public function logout(Request $request)
     {
-        //
-    }
+        Auth::logout();
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        //
-    }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
-    {
-        //
-    }
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
-    {
-        //
+        return redirect()->route('show.login');
     }
 }
