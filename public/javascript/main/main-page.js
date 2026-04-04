@@ -81,7 +81,6 @@ function enableSidebar(){
                 if(sidebar.contains(e.target) || mobileBtn.contains(e.target)){
                     return;
                 }
-                closeSidebar();
             })
         }
     })
