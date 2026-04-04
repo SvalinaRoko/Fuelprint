@@ -1,105 +1,3 @@
-// MOBILE NAVIGATION 
-
-function showButton(){
-    const isMobile = window.matchMedia("(max-width:920px)").matches;
-    const brgerBtn = document.querySelector(".buttonMobile");
-    const mobileCta = document.querySelector(".mobile-cta");
-    
-    if(!brgerBtn){
-        return;
-    }
-    if(isMobile){
-        mobileCta.classList.remove("hide");
-        
-        brgerBtn.classList.remove("hide");
-        brgerBtn.classList.add("show");
-    }else {
-        mobileCta.classList.add("hide");
-
-        brgerBtn.classList.remove("show");
-        brgerBtn.classList.add("hide");
-
-    }
-}
-showButton();
-window.addEventListener("resize", function() {
-    showButton();
-});
-
-function enableMobileNav(){
-
-    const mobileBtn = document.querySelector(".buttonMobile");
-    const brger = document.querySelector(".brger");
-    const linksNav = document.querySelector(".left-links");
-    const nav = document.querySelector(".navigation");
-    const rightLinks = document.querySelector(".right-links");
-    const allRightButtons = Array.from(rightLinks.children);
-    const firstLink = allRightButtons[0];
-
-    if(!mobileBtn){
-        return;
-    }
-    mobileBtn.addEventListener('click',() => {
-        const isOpened = mobileBtn.getAttribute("aria-expanded");
-        if(isOpened == 'false'){
-            mobileBtn.setAttribute("aria-expanded", true);
-
-            brger.setAttribute("stroke","#0984e3");
-            
-            linksNav.classList.add("moveLinksDown");
-
-            nav.classList.add("backgroundToWhite");
-
-            firstLink.classList.add("hide");
-
-        }else{
-            mobileBtn.setAttribute("aria-expanded", false);
-
-            brger.setAttribute("stroke","#fff");
-
-            linksNav.classList.remove("moveLinksDown");
-
-            nav.classList.remove("backgroundToWhite");
-
-            firstLink.classList.remove("hide");
-        }
-    })
-    const closeMobileNav = new IntersectionObserver((entries,observer) => {
-        entries.forEach(entry => {
-            if (!entry.isIntersecting) {
-                mobileBtn.setAttribute("aria-expanded", false);
-                brger.setAttribute("stroke","#fff");
-                linksNav.classList.remove("moveLinksDown");
-                nav.classList.remove("backgroundToWhite");
-                firstLink.classList.remove("hide");
-            }
-          });
-        }, {
-          threshold: 0,  
-        });
-        
-        closeMobileNav.observe(nav);
-
-        document.addEventListener("click", (e) => {
-            const isOpened = mobileBtn.getAttribute("aria-expanded");
-            
-            if (isOpened === "false") return;
-            
-            if (nav.contains(e.target) || mobileBtn.contains(e.target)) {
-                return;
-            }
-            mobileBtn.setAttribute("aria-expanded", false);
-            brger.setAttribute("stroke", "#fff");
-            linksNav.classList.remove("moveLinksDown");
-            nav.classList.remove("backgroundToWhite");
-            firstLink.classList.remove("hide");
-        });
-}
-enableMobileNav();
-
-
-
-
 // FUNCTIONS SECTION DROPDOWN
 function updateContainerSpacing() {
     const mq = window.matchMedia("(max-width:1231px)");
@@ -221,6 +119,7 @@ document.addEventListener('click', (e) => {
         closeAllQ(questionBlock);
         question.classList.toggle('borderRadius');
         questionBlock.classList.toggle('spaceBottom');
+        questionBlock.classList.toggle('noSpace');
         questionContent.classList.toggle('closed');
         questionContent.classList.toggle('opened');
         plusIcon.classList.toggle('closeQ')
@@ -238,32 +137,6 @@ document.addEventListener('click', (e) => {
         })
     }
 })
-
-// SMOOTHE SCROLLING
-const sections = document.querySelectorAll(".section");
-const navLinks = document.querySelectorAll(".nav-links .btn-link");
-const OFFSET = 300;
-
-for (const link of navLinks){
-    link.addEventListener("click", smoothScroll);
-}
-
-function smoothScroll (event){
-    const href = this.getAttribute("href");
-    if (href === "#" || href === "") return;
-    event.preventDefault();
-    const targetId = this.getAttribute("href");
-    const targetElement = document.querySelector(targetId);
-
-    if(targetElement){
-        const targetPossition = targetElement.getBoundingClientRect().top +window.pageYOffset - OFFSET;
-        
-        window.scrollTo({
-            top:targetPossition,
-            behavior: "smooth"
-        });
-    }
-}
 // FOOTPRINTS ANIMATION
 function setFootprintAnimation(){
 
@@ -275,8 +148,6 @@ function setFootprintAnimation(){
         }, index * 200);
     });   
 }
-
-// ---------- ANIMATIONS ---------- //
 
 const aboutSection = document.getElementById("about");
 const functionsSection = document.getElementById("functionality");
@@ -382,9 +253,9 @@ const funcObserver = new IntersectionObserver((entries,observer) => {
                     item.classList.add("func-title-animation");
                 },680)
             })
-
+            
             funcHeading.classList.add("func-heading-animation");
-
+            
             functions.forEach((func,index) => {
                 setTimeout(()=>{
                     func.classList.add("function-animtion")
@@ -393,12 +264,12 @@ const funcObserver = new IntersectionObserver((entries,observer) => {
             setTimeout(()=>{
                 funcImages.classList.add("func-image-animation");
             },300)
-
+            
             observer.unobserve(entry.target);
         }
     })
 },{
-     threshold:0,
+    threshold:0,
     rootMargin:"0px 0px -500px 0px"
 })
 
@@ -465,5 +336,3 @@ const faqObserver = new IntersectionObserver((entries,observer)=>{
     
 
 faqObserver.observe(faqS);
-
-

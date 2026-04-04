@@ -5,11 +5,17 @@
 }
 :root{
     --section-spacing: 20rem auto;
+    --main-tint: rgba(9,133,227,0.3);
+    --main-color: #0984e3;
+    --secondary-color: #546de5;
+    --light-shadow:1px 1px 10px rgba(0, 0, 0, 0.03) ;
 }
 html{
     font-size: 62.5%;
 }
 body{
+    display: flex;
+    flex-direction: column;
     position: relative;
     min-height: 100vh;
     font-size: 1.4rem;
@@ -24,6 +30,16 @@ body{
 }
 main{
     flex:1;
+}
+.no-scroll {
+    overflow: hidden;
+    height: 100vh;
+  }
+.error-message{
+    position: absolute;
+    bottom:-2rem;
+    color: red;
+    text-transform: uppercase;
 }
 .show{
     display: block;
@@ -48,6 +64,9 @@ main{
 }
 .grid-4-cols{
     grid-template-columns: repeat(4,1fr);
+}
+.grid-6-cols{
+    grid-template-columns: repeat(6,1fr);
 }
 .grid-4-rows{
     grid-template-rows:repeat(4,1fr)
@@ -86,16 +105,13 @@ main{
     font-weight: 600;
     color: rgba(51, 51, 51, 0.5);
 }
-.error-msg{
-    color: red;
-    font-size: 2.4rem;
-    text-transform: uppercase;
-}
+
 .center{
     margin: 0 auto;
 }
 .placeholder{
-    background-color:#333;
+    /* display: none; */
+    background-color:#232;
     width: 50rem;
     height: 50rem;
 }
