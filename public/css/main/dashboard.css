@@ -56,6 +56,12 @@ body{
     box-shadow:var(--light-shadow);
 }
 /* SIDEBAR */
+.closeSidebar{
+    transform: translateX(-100%);
+}
+.openSidebar{
+    transform: translateX(0);
+}
 .sidebar-section{
     width: 35rem;
     height: 100vh;
@@ -63,6 +69,10 @@ body{
 .sidebar-content{
     height: 100%;
     padding: 4rem 2rem;
+}
+.sidebar-container{
+
+
 }
 .sb-logo{
     justify-content:space-between;
@@ -116,6 +126,7 @@ a[aria-label="Fuelprint logo"]:focus{
 }
 /* MOBILE SIDEBAR */
 .mobile-nav-button{
+    pointer-events: auto;
     display: none;
     align-self:center;
 }

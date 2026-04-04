@@ -3,6 +3,7 @@ function showButton(){
     const isMobile = window.matchMedia("(max-width:920px)").matches;
     const brgerBtn = document.querySelector(".buttonMobile");
     const mobileCta = document.querySelector(".mobile-cta");
+    
 
     if(!brgerBtn){
         return;
