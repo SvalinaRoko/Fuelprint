@@ -74,6 +74,8 @@
     /* SIDEBAR SECTION */
     .sidebar-section{
         position: absolute;
+        top: 0;
+        left: 0;
     }
     .sidebar-container{
         position: relative;
@@ -85,7 +87,6 @@
         backdrop-filter:blur(10px);
         background-color:#0984e340;
         transition: transform 0.5s ease-in-out;
-        transform:translateX(-100%);
     }
 
     /* MOBILE SIDEBAR BUTTON */
@@ -120,14 +121,15 @@
         display: none;
     }
     .row{
+        cursor: pointer;
     }
     [data-cell="data-row"]:hover,
     [data-cell="data-row"]:active{
         cursor: pointer;
     }
     .dashboard-options{
-        padding-left: 0;
-        justify-content: flex-start;
+        padding-right: 0;
+        justify-content: flex-end;
     }
     .showing-copy{
         display: none;
