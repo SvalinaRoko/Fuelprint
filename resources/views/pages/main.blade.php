@@ -4,8 +4,8 @@
 
 @push('styles')
 <link rel="stylesheet" href="{{ asset('css/default.css') }}">
-<link rel="stylesheet" href="{{ asset('css/main/main.css') }}">
-<link rel="stylesheet" href="{{ asset('css/main/main.queries.css') }}">
+<link rel="stylesheet" href="{{ asset('css/main/dashboard.css') }}">
+<link rel="stylesheet" href="{{ asset('css/main/dashboard.queries.css') }}">
 @endpush
 
 @php
@@ -29,6 +29,6 @@ $hideFooter = true;
 
 
 @push('scripts')
-<script src="/javascript/script.js" defer></script>
+<!-- <script src="/javascript/script.js" defer></script> -->
 <script src="/javascript/main/main-page.js" defer></script>
 @endpush

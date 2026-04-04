@@ -158,13 +158,13 @@ li #login-btn:active{
     stroke-dasharray: 60 105 60  1000;
     stroke-dashoffset: -90;
 }
-.buttonMobile .brger{
-    transition: translate 1s, rotate 1s;
-}
-.buttonMobile[aria-expanded = "true"] .brger{
-    translate: 0 -5px;
-    rotate: 45deg;
-}
+    .buttonMobile .brger{
+        transition: translate 1s, rotate 1s;
+    }
+    .buttonMobile[aria-expanded = "true"] .brger{
+        translate: 0 -5px;
+        rotate: 45deg;
+    }
 /* HERO */
 .header-footprints{
     min-width: 100%;

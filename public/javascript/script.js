@@ -4,7 +4,6 @@ function showButton(){
     const brgerBtn = document.querySelector(".buttonMobile");
     const mobileCta = document.querySelector(".mobile-cta");
 
-    
     if(!brgerBtn){
         return;
     }

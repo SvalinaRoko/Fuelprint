@@ -8,6 +8,7 @@
     --main-tint: rgba(9,133,227,0.3);
     --main-color: #0984e3;
     --secondary-color: #546de5;
+    --light-shadow:1px 1px 10px rgba(0, 0, 0, 0.03) ;
 }
 html{
     font-size: 62.5%;
@@ -30,6 +31,10 @@ body{
 main{
     flex:1;
 }
+.no-scroll {
+    overflow: hidden;
+    height: 100vh;
+  }
 .error-message{
     position: absolute;
     bottom:-2rem;
