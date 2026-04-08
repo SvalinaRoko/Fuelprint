@@ -12,6 +12,10 @@
 $hideNav = true;
 @endphp
 
+@php
+$hideFooter = true;
+@endphp
+
 @section('content')
 <div class="form-container login grid grid-2-cols">
     <div class=" logo-container" id="form"><a href="{{route('welcome')}}" aria-label="Fuelprint logo" role="img">
@@ -57,8 +61,10 @@ $hideNav = true;
             </form>
         </div>
     </div>
-    @endsection
+</div>
+<x-copyright />
+@endsection
 
-    @push('scripts')
-    <script src="/javascript/forms/auth-forms.js" defer></script>
-    @endpush
+@push('scripts')
+<script src="/javascript/forms/auth-forms.js" defer></script>
+@endpush

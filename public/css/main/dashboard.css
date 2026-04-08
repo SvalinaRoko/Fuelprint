@@ -257,6 +257,7 @@ a[aria-label="Fuelprint logo"]:focus{
     gap: 2rem;
 }
 .table-content{
+    height: 75vh;
     border: 3px solid  rgba(0, 0, 0, 0.1);
     border-radius: 2rem;
 }

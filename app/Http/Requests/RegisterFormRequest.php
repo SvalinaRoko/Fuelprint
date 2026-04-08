@@ -24,7 +24,7 @@ class RegisterFormRequest extends FormRequest
     {
         return [
             'name' => 'required|min:2|max:30',
-            'surname' => 'required|min:2|max:40',
+            'surname' => 'min:2|max:40',
             'email-register' => 'required|email|max:255|unique:users,email',
             'password' => ['required', 'confirmed', Password::min(8)->letters()->numbers()->symbols(), 'regex:/^\S+$/', 'string']
         ];
@@ -37,7 +37,6 @@ class RegisterFormRequest extends FormRequest
             'name.min' => 'First name must be at least 2 characters.',
             'name.max' => 'First name may not exceed 30 characters.',
 
-            'surname.required' => 'Enter your surname.',
             'surname.min' => 'Surname must be at least 2 characters.',
             'surname.max' => 'Surname may not exceed 40 characters.',
 

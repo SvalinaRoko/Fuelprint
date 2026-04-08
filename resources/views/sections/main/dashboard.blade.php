@@ -35,7 +35,7 @@
                     <th data-cell="date">Date</th>
                     <th data-cell="amount">Amout</th>
                     <th data-cell="price">Price/l</th>
-                    <th data-cell="payed">Payed</th>
+                    <th data-cell="payed">Paid</th>
                     <th data-cell="traveled">Traveled</th>
                     <th data-cell="total">Total</th>
                     <th data-cell="kpl">KPL</th>
@@ -51,146 +51,7 @@
                     <th data-cell="kpl">Litre</th>
                     <th data-cell="station">Name</th>
                 </tr>
-                <tr class="row" id="first-row" data-cell="data-row">
-                    <td data-cell="date">16.12.2001</td>
-                    <td data-cell="amount">50</td>
-                    <td data-cell="price">1.53</td>
-                    <td data-cell="payed">70</td>
-                    <td data-cell="traveled">500</td>
-                    <td data-cell="total">200000</td>
-                    <td data-cell="kpl">8.1</td>
-                    <td data-cell="station">Ina</td>
-                </tr>
-                <tr class="row" id="second-row">
-                    <td data-cell="date">16.12.2001</td>
-                    <td data-cell="amount">50</td>
-                    <td data-cell="price">1.53</td>
-                    <td data-cell="payed">70</td>
-                    <td data-cell="traveled">500</td>
-                    <td data-cell="total">200000</td>
-                    <td data-cell="kpl">8.1</td>
-                    <td data-cell="station">Ina</td>
-                </tr>
-                <tr class="row" id="third-row">
-                    <td data-cell="date">16.12.2001</td>
-                    <td data-cell="amount">50</td>
-                    <td data-cell="price">1.53</td>
-                    <td data-cell="payed">70</td>
-                    <td data-cell="traveled">500</td>
-                    <td data-cell="total">200000</td>
-                    <td data-cell="kpl">8.1</td>
-                    <td data-cell="station">Ina</td>
-                </tr>
-                <tr class="row" id="fourth-row">
-                    <td data-cell="date">16.12.2001</td>
-                    <td data-cell="amount">50</td>
-                    <td data-cell="price">1.53</td>
-                    <td data-cell="payed">70</td>
-                    <td data-cell="traveled">500</td>
-                    <td data-cell="total">200000</td>
-                    <td data-cell="kpl">8.1</td>
-                    <td data-cell="station">Ina</td>
-                </tr>
-                <tr class="row" id="fifth-row">
-                    <td data-cell="date">16.12.2001</td>
-                    <td data-cell="amount">50</td>
-                    <td data-cell="price">1.53</td>
-                    <td data-cell="payed">70</td>
-                    <td data-cell="traveled">500</td>
-                    <td data-cell="total">200000</td>
-                    <td data-cell="kpl">8.1</td>
-                    <td data-cell="station">Ina</td>
-                </tr>
-                <tr class="row" id="sixth-row">
-                    <td data-cell="date">16.12.2001</td>
-                    <td data-cell="amount">50</td>
-                    <td data-cell="price">1.53</td>
-                    <td data-cell="payed">70</td>
-                    <td data-cell="traveled">500</td>
-                    <td data-cell="total">200000</td>
-                    <td data-cell="kpl">8.1</td>
-                    <td data-cell="station">Ina</td>
-                </tr>
-                <tr class="row" id="seventh-row">
-                    <td data-cell="date">16.12.2001</td>
-                    <td data-cell="amount">50</td>
-                    <td data-cell="price">1.53</td>
-                    <td data-cell="payed">70</td>
-                    <td data-cell="traveled">500</td>
-                    <td data-cell="total">200000</td>
-                    <td data-cell="kpl">8.1</td>
-                    <td data-cell="station">Ina</td>
-                </tr>
-                <tr class="row" id="eight-row">
-                    <td data-cell="date">16.12.2001</td>
-                    <td data-cell="amount">50</td>
-                    <td data-cell="price">1.53</td>
-                    <td data-cell="payed">70</td>
-                    <td data-cell="traveled">500</td>
-                    <td data-cell="total">200000</td>
-                    <td data-cell="kpl">8.1</td>
-                    <td data-cell="station">Ina</td>
-                </tr>
-                <tr class="row" id="eight-row">
-                    <td data-cell="date">16.12.2001</td>
-                    <td data-cell="amount">50</td>
-                    <td data-cell="price">1.53</td>
-                    <td data-cell="payed">70</td>
-                    <td data-cell="traveled">500</td>
-                    <td data-cell="total">200000</td>
-                    <td data-cell="kpl">8.1</td>
-                    <td data-cell="station">Ina</td>
-                </tr>
-                <tr class="row" id="eight-row">
-                    <td data-cell="date">16.12.2001</td>
-                    <td data-cell="amount">50</td>
-                    <td data-cell="price">1.53</td>
-                    <td data-cell="payed">70</td>
-                    <td data-cell="traveled">500</td>
-                    <td data-cell="total">200000</td>
-                    <td data-cell="kpl">8.1</td>
-                    <td data-cell="station">Ina</td>
-                </tr>
-                <tr class="row" id="eight-row">
-                    <td data-cell="date">16.12.2001</td>
-                    <td data-cell="amount">50</td>
-                    <td data-cell="price">1.53</td>
-                    <td data-cell="payed">70</td>
-                    <td data-cell="traveled">500</td>
-                    <td data-cell="total">200000</td>
-                    <td data-cell="kpl">8.1</td>
-                    <td data-cell="station">Ina</td>
-                </tr>
-                <tr class="row" id="eight-row">
-                    <td data-cell="date">16.12.2001</td>
-                    <td data-cell="amount">50</td>
-                    <td data-cell="price">1.53</td>
-                    <td data-cell="payed">70</td>
-                    <td data-cell="traveled">500</td>
-                    <td data-cell="total">200000</td>
-                    <td data-cell="kpl">8.1</td>
-                    <td data-cell="station">Ina</td>
-                </tr>
-                <tr class="row" id="eight-row">
-                    <td data-cell="date">16.12.2001</td>
-                    <td data-cell="amount">50</td>
-                    <td data-cell="price">1.53</td>
-                    <td data-cell="payed">70</td>
-                    <td data-cell="traveled">500</td>
-                    <td data-cell="total">200000</td>
-                    <td data-cell="kpl">8.1</td>
-                    <td data-cell="station">Ina</td>
-                </tr>
-                <tr class="row" id="eight-row">
-                    <td data-cell="date">16.12.2001</td>
-                    <td data-cell="amount">50</td>
-                    <td data-cell="price">1.53</td>
-                    <td data-cell="payed">70</td>
-                    <td data-cell="traveled">500</td>
-                    <td data-cell="total">200000</td>
-                    <td data-cell="kpl">8.1</td>
-                    <td data-cell="station">Ina</td>
-                </tr>
+
             </table>
         </div>
         <div class="dashboard-options flex">

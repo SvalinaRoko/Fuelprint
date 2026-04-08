@@ -121,6 +121,8 @@ body{
     font-size: 1.6rem;
 }
 .copyright{
+    position: absolute;
+    bottom: 0;
     width: 100%;
     text-align: center;
     padding-bottom: 0.5rem;
