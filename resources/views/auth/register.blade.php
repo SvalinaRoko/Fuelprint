@@ -12,6 +12,10 @@
 $hideNav = true;
 @endphp
 
+@php
+$hideFooter = true;
+@endphp
+
 @section('content')
 <div class="form-container grid grid-2-cols">
     <div class=" logo-container" id="form"><a href="{{route('welcome')}}" aria-label="Fuelprint logo" role="img">
@@ -44,7 +48,7 @@ $hideNav = true;
                 </div>
 
                 <div class="form-box flex dir-col">
-                    <label for="surname">Surname *</label>
+                    <label for="surname">Surname</label>
                     <input type="text" class="email-input" name="surname" placeholder="" value="{{old('surname')}}">
                     @error('surname')
                     <p class="error-message">{{ $message }}</p>
@@ -91,8 +95,10 @@ $hideNav = true;
             </form>
         </div>
     </div>
-    @endsection
+</div>
+<x-copyright />
+@endsection
 
-    @push('scripts')
-    <script src="/javascript/forms/auth-forms.js" defer></script>
-    @endpush
+@push('scripts')
+<script src="/javascript/forms/auth-forms.js" defer></script>
+@endpush
