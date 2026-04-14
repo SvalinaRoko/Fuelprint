@@ -7,7 +7,7 @@ class Database
     private function __construct()
     {
         try {
-            $this->connection = new PDO("mysql:host=https://Fuelprint.test;dnbane=fuelprint_database", "root", "mysqlpass");
+            $this->connection = new PDO("mysql:host=https://Fuelprint.test;dnbane=fuelprintdb", "root", "mysqlpass");
             $this->connection->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
         } catch (PDOException $e) {
             die("Unable to connect to the database. {$e->getMessage()}");
