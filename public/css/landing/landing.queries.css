@@ -158,6 +158,9 @@
     #left-links .btn-link{
         font-size: 2.6rem;
     }
+    .mobile-nav-button,.logo-container{
+        pointer-events: auto;
+    }
     .mobile-cta-container{
         text-align: center;
         margin-top: 1rem;

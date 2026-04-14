@@ -36,20 +36,23 @@ function enableMobileNav(){
     const rightLinks = document.querySelector(".right-links");
     const allRightButtons = Array.from(rightLinks.children);
     const firstLink = allRightButtons[0];
+    var w = window.innerWidth;
 
     if(!mobileBtn){
         return;
     }
     function closeNav() {
         mobileBtn.setAttribute("aria-expanded", false);
+        nav.style.pointerEvents = "none";
         brger.setAttribute("stroke", "#fff");
         linksNav.classList.remove("moveLinksDown");
         nav.classList.remove("backgroundToWhite");
         firstLink.classList.remove("hide");
     }
-
+    
     function openNav(){
         mobileBtn.setAttribute("aria-expanded", true);
+        nav.style.pointerEvents = "auto";
         brger.setAttribute("stroke","#0984e3");
         linksNav.classList.add("moveLinksDown");
         nav.classList.add("backgroundToWhite");
@@ -64,7 +67,9 @@ function enableMobileNav(){
             closeNav();
         }
     })
-
+    if(w < 920){
+        closeNav();
+    }
     window.addEventListener("resize", () => {
         if (window.innerWidth > 920) {
             closeNav(); 

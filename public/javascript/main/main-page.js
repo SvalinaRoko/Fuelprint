@@ -12,11 +12,12 @@ function showButton(){
     if(isMobile){
         sidebar.classList.add("closeSidebar");
         sidebar.classList.remove("openSidebar");
-
+        
         brgerBtn.classList.remove("hide");
         brgerBtn.classList.add("show");
-
+        
         mobileBtn.setAttribute("aria-expanded", false);
+        sidebarContainer.style.pointerEvents = "none";
         
     }else {
 
