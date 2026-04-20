@@ -12,7 +12,7 @@
         </div>
         <div class="sidebar-content flex dir-col">
             <x-logo />
-            <div class="navigation-container flex dir-col">
+            <!-- <div class="navigation-container flex dir-col">
                 <form class="searchbar" action="" method="">
                     @csrf
                     <input class="searchbar-input" type="text" name="query" value="" placeholder="Search" />
@@ -22,10 +22,10 @@
                     <a class="log-data-btn" href="{{route('show.createListing')}}" aria-label="Button for creating a listing in the dashborad table"> &plus; Create listing
                     </a>
                 </div>
-            </div>
+            </div> -->
             <div class="sb-funcs flex dir-col">
                 <!-- ONE -->
-                <div class="sb-item flex" id="first-bar">
+                <a href="{{route('show.dashboard')}}" class="sb-item flex" id="first-bar">
                     <div class="dd-name flex">
                         <div class="bar-icon">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="sb-dd-icon" id="dashboard-icon">
@@ -35,7 +35,7 @@
                         </div>
                         <p class="bar-name">Dashboard</p>
                     </div>
-                </div>
+                </a>
                 <!-- TWO -->
                 <div class="sb-item flex" id="first-bar">
                     <div class="dd-name flex">

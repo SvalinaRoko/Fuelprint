@@ -1,7 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
-use App\Http\Controllers\LoggedInController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\WelcomeController;
 use Illuminate\Support\Facades\Route;
 
@@ -13,4 +13,5 @@ Route::post('/login', [AuthController::class, 'login'])->name('login');
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 Route::post('/register', [AuthController::class, 'register'])->name('register');
 
-Route::get('/dashboard', [LoggedInController::class, 'showMain'])->name('show.main');
+Route::get('/dashboard', [DashboardController::class, 'showDashboard'])->name('show.dashboard');
+Route::get('/create', [DashboardController::class, 'showCreateListing'])->name('show.createListing');
