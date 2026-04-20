@@ -1,14 +1,28 @@
 @extends('layouts.default')
 
-@section('title', 'Fuelprint - create listing')
+@section('title', 'Fuelprint - Create Listing')
 
 @push('styles')
 <link rel="stylesheet" href="{{ asset('css/default.css') }}">
+<link rel="stylesheet" href="{{ asset ('css/create/create.css') }}">
+<link rel="stylesheet" href="{{ asset ('css/create/create.queries.css')}}">
 @endpush
 
+@php
+$hideNav = true;
+@endphp
+
+@php
+$hideFooter = true;
+@endphp
+
 @section('content')
+<section class="create-listing-section">
+    @include('sections.create.sidebar')
+</section>
 @endsection
 
 @push('scripts')
 <script src="/javascript/script.js" defer></script>
+<script src="/javascript/create/create-form.js" defer></script>
 @endpush

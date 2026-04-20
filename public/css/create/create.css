@@ -1,0 +1,161 @@
+body{
+    background-color:#cee6f9;
+}
+/* SIDEBAR */
+.navigation-container{
+    padding:1rem 2rem;
+}
+.searchbar{
+    display: flex;
+}
+
+.searchbar-input{
+    font-size: 2rem;
+    padding: 0.7rem 1rem ;
+    border-radius: 0.5rem;
+    margin-bottom: 2rem;
+    padding-right:4rem;
+    border: none;
+    box-shadow:var(--light-shadow);
+}
+.searchbar-input:focus{
+    outline: 0;
+
+}
+.search-btn {
+   transform: translate(-3rem,1rem); 
+    width: 20px;
+    height: 20px;
+    border: 1px solid transparent;
+    background: transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E") no-repeat center;
+    background-size:2rem;
+    cursor: pointer;
+}
+.log-data{
+    margin-bottom: 2rem;
+}
+.log-data-btn{
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    border: none;
+    color: #fff;
+    font-size:2rem;
+    letter-spacing: 0.05rem;
+    text-decoration:none;
+    background-color:  #0984e3;
+    transition: all 0.5s;
+}
+.log-data-btn:hover,
+.log-data-btn:active{
+    cursor: pointer;
+    background-color: #fff;
+    color: #0984e3;
+    box-shadow:var(--light-shadow);
+}
+
+.closeSidebar{
+    transform: translateX(-100%);
+}
+.openSidebar{
+    transform: translateX(0);
+}
+.sidebar-section{
+    width: 35rem;
+    height: 100vh;
+}
+.sidebar-content{
+    height: 100%;
+    padding: 4rem 2rem;
+}
+.sidebar-container{
+
+
+}
+.sb-logo{
+    justify-content:space-between;
+}
+.logo-container{
+    padding: 0 2rem;
+}
+a[aria-label="Fuelprint logo"]:focus{
+    outline: 0;
+}
+.logo{
+    width: clamp(20rem,50%,30rem);
+}
+.sb-funcs{
+    padding-top:2rem;
+    flex-grow:1;
+}
+.sb-item{
+    justify-content:space-between;
+    padding: 1rem 2rem;
+    color: #333;
+    text-decoration: none;
+    background: none;
+    border-radius: 2rem;
+    transition: background-color 0.3s;
+
+    cursor:pointer;
+}
+.sb-item:hover,
+.sb-item:active{
+    background-color: #fff;
+}
+.dd-name{
+    align-items: center;
+    gap: 1rem;
+}
+.sb-dd-icon{
+    width: 3.5rem;
+}
+.sb-dd-arrow{
+    width: 2.5rem
+}
+.sb-options{
+    margin-bottom:5rem;
+}
+.sb-user{
+    border-radius:0.5rem 0.5rem 0 0;
+    border-top:3px solid rgba(0,0,0,0.07);
+    padding: 2rem 0 0 0;
+    gap: 2rem;
+    align-items:center;
+}
+.test-picture{
+    width: 5rem;
+    height:5rem;
+
+    background-color:#fff;
+
+    border-radius:2.5rem;
+}
+/* MOBILE SIDEBAR */
+.mobile-nav-button{
+    pointer-events: auto;
+    display: none;
+    align-self:center;
+}
+.buttonMobile{
+    overflow: hidden;
+    background: transparent;
+    border: none;
+    cursor:pointer;
+}
+.buttonMobile .line{
+    transition: 1s;
+    stroke-dasharray: 60 31 60  1000;
+}
+.buttonMobile[aria-expanded = "true"] .line{
+    stroke-dasharray: 60 105 60  1000;
+    stroke-dashoffset: -90;
+}
+.buttonMobile .brger{
+    transition: translate 1s, rotate 1s;
+}
+.buttonMobile[aria-expanded = "true"] .brger{
+    translate: 0 -5px;
+    rotate: 45deg;
+}
