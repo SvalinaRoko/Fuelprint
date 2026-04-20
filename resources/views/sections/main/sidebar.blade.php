@@ -19,8 +19,8 @@
                     <button class="search-btn" type="submit"></button>
                 </form>
                 <div class="log-data">
-                    <button class="log-data-btn flex" aria-label="Button for creating a listing in the dashborad table"> &plus; Create listing
-                    </button>
+                    <a class="log-data-btn" href="{{route('show.createListing')}}" aria-label="Button for creating a listing in the dashborad table"> &plus; Create listing
+                    </a>
                 </div>
             </div>
             <div class="sb-funcs flex dir-col">

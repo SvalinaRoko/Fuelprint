@@ -4,8 +4,8 @@
 
 @push('styles')
 <link rel="stylesheet" href="{{ asset('css/default.css') }}">
-<link rel="stylesheet" href="{{ asset('css/main/dashboard.css') }}">
-<link rel="stylesheet" href="{{ asset('css/main/dashboard.queries.css') }}">
+<link rel="stylesheet" href="{{ asset('css/dashboard/dashboard.css') }}">
+<link rel="stylesheet" href="{{ asset('css/dashboard/dashboard.queries.css') }}">
 @endpush
 
 @php
