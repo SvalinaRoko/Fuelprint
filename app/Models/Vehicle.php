@@ -10,6 +10,7 @@ class Vehicle extends Model
         'brand',
         'model',
         'year',
+        'odometer',
         'license_plate',
         'fuel_type',
     ];

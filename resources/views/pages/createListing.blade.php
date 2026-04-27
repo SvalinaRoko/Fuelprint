@@ -17,8 +17,11 @@ $hideFooter = true;
 @endphp
 
 @section('content')
-<section class="create-listing-section">
+<section class="create-listing-section flex">
     @include('sections.create.sidebar')
+    @include('sections.create.listing')
+    @include('sections.create.animation')
+    <x-copyright />
 </section>
 @endsection
 

@@ -11,7 +11,7 @@
             </button>
         </div>
         <div class="sidebar-content flex dir-col">
-            <x-logo />
+            <x-logo href="{{ route ('show.dashboard') }}" />
             <div class="navigation-container flex dir-col">
                 <form class="searchbar" action="" method="">
                     @csrf

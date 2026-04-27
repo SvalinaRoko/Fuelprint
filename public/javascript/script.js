@@ -1,3 +1,4 @@
+
 // MOBILE NAVIGATION 
 function showButton(){
     const isMobile = window.matchMedia("(max-width:920px)").matches;
@@ -135,5 +136,6 @@ function smoothScroll (event){
         });
     }
 }
+
 
 

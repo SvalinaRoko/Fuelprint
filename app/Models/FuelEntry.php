@@ -7,12 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 class FuelEntry extends Model
 {
     protected $fillable = [
+        'vehicle_id',
         'date',
         'price_per_liter',
         'liters_filled',
-        'amount_paid',
         'distance_traveled',
-        'odometer',
         'gas_station',
     ];
 
@@ -20,9 +19,7 @@ class FuelEntry extends Model
         'date' => 'date',
         'price_per_liter' => 'float',
         'liters_filled' => 'float',
-        'amount_paid' => 'float',
         'distance_traveled' => 'float',
-        'odometer' => 'float',
     ];
 
     public function vehicle()
