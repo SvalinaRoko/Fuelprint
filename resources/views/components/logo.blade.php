@@ -1,4 +1,5 @@
-<div class=" logo-container"><a href="{{route('welcome')}}" aria-label="Fuelprint logo" role="img">
+@props(['href' => '#'])
+<div class="logo-container"><a href="{{ $href }}" aria-label="Fuelprint logo" role="img">
         <svg class="logo" xmlns="http://www.w3.org/2000/svg" id="Layer_1" width="600" height="100" viewBox="0 0 400 100">
             <defs>
                 <style>

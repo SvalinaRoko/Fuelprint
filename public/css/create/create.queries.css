@@ -1,30 +1,7 @@
 /* 1280px */
 @media(max-width:80em){
-
     :root{    
         --light-shadow:1px 1px 10px rgba(0, 0, 0, 0.0) ;
-    }
-    /* DASHBOARD SECTION */
-    .overview{
-        margin:1rem;
-        padding:2rem;
-        background:#fff;
-        border-radius: 2rem;
-        justify-content:flex-end;
-    }
-    .dashboard-container{
-        padding: 0;
-    }
-    .dashboard{
-        margin: 1rem;
-        background:#fff;
-        border-radius:2rem;
-    }
-    .export-option-btn{
-        display: block;
-    }
-    .export {
-        display: none;
     }
     /* MOBILE SIDEBAR*/
     .mobile-nav-button{
@@ -115,63 +92,9 @@
 
 /* 880px */
 @media(max-width:55em){
-    [data-cell="total"],
-    [data-cell="kpl"],
-    [data-cell="station"]{
-        display: none;
-    }
-    .row{
-        cursor: pointer;
-    }
-    [data-cell="data-row"]:hover,
-    [data-cell="data-row"]:active{
-        cursor: pointer;
-    }
-    .dashboard-options{
-        padding-right: 0;
-        justify-content: flex-end;
-    }
-    .showing-copy{
-        display: none;
-    }
+
 }
 /* 560px */
 @media(max-width:35em){
-    .dashboard{
-        margin:0;
-    }
-    .overview-heading{
-        margin-bottom: 1rem;
-    }
-    .navigation-container{
-        padding: 0;
-    }
-    .searchbar-input{
-        width: 90%;
-    }
-    .overview{
-        justify-content: center;
-        margin-top: 10rem;
-    }
-    .logo-container{
-        margin-top: 5rem;
-    }
-    .buttonMobile{
-        top: 1rem;
-    }
-    .sidebar-content{
-        width: 100vw;
-    }
-    [data-cell="amount"],
-    [data-cell="price"],
-    [data-cell="total"],
-    [data-cell="kpl"],
-    [data-cell="station"]{
-        display: none;
-    }
 
-    .options-buttons,
-    .dashboard-options{
-        justify-content:center;
-    }
 }

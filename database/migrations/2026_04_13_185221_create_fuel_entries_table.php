@@ -16,7 +16,6 @@ return new class extends Migration {
             $table->decimal('liters_filled', 10, 2)->unsigned();
             $table->decimal('amount_paid', 10, 2)->unsigned();
             $table->decimal('distance_traveled', 10, 2)->unsigned();
-            $table->decimal('odometer', 10, 2)->unsigned();
 
             $table->string('gas_station', 100)->nullable();
 

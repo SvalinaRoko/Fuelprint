@@ -1,7 +1,7 @@
 <header class="header-section">
     <div class="navigation-container">
         <nav class="navigation grid grid-3-cols">
-            <x-logo />
+            <x-logo href=" {{ route ('welcome') }}" />
             <div class="left-links">
                 <ul class="nav-links flex" id="left-links">
                     @yield('nav-left-links')

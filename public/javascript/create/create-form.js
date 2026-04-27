@@ -92,3 +92,19 @@ function enableSidebar(){
 
 }
 enableSidebar();
+// USE CURRNET DATE 
+var checkbox = document.querySelector("input[name=use-current-date]");
+var dateInput = document.querySelector('input[name=date]');
+
+checkbox.addEventListener('change', function(){
+    if(this.checked){
+        const today = new Date();
+        const dd = String(today.getDate()).padStart(2,'0');
+        const mm =String(today.getMonth()+1).padStart(2,'0');
+        const year = today.getFullYear();
+
+        dateInput.value = `${year}-${mm}-${dd}`;
+    }else{
+        dateInput.value = "";
+    }
+})

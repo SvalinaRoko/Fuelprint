@@ -159,3 +159,99 @@ a[aria-label="Fuelprint logo"]:focus{
     translate: 0 -5px;
     rotate: 45deg;
 }
+/* CREATE LISTING FORM */
+.create-listing-section{
+}
+.create-listing-container{
+    align-items: center;
+    width: 100%;
+    margin:0;
+    padding:1.5rem 1.5rem 1.5rem 8rem;
+}
+.create-form{
+    /* height: 100%; */
+}
+.create-listing-form{
+    width: 55rem;
+    height: 95vh;
+    background-color: #fff;
+    margin-left:20rem ;
+    border-radius:2rem;
+    padding:2rem;
+
+    justify-content: space-around;
+}
+.create-listing-inputs{
+    gap: 5rem;
+    justify-self: center;
+    align-self: center;
+}
+.create-listing-form label{
+    justify-content: space-evenly;
+    font-size: 2.3rem;
+}
+#gas-station-input{
+    gap: 0.5rem;
+}
+.input-field{
+    justify-content: space-between;
+}
+.info-tip{
+    padding-top: 0.5rem;
+    color: #888;
+}
+.input{
+    height: 3rem;
+    width: 15rem;
+    font-size: 2.3rem;
+    color: #333;
+    padding: 0.2rem;
+    border-radius: 0.5rem;
+    border: solid 1.5px #333;
+}
+.input#date{
+    font-size: 1.6rem;
+
+}
+.input:focus{
+    outline: none;
+}
+.create-btn{
+    border: none;
+    background-color: #0984e3;
+    color: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 0 10px 10px rgba(0,0,0,0.03);
+    font-size: 2.5rem;
+    font-weight: 600;
+    letter-spacing: 0.15rem;
+    align-self:center;
+    justify-self:center;
+    height: 6rem;
+    width: 20rem;
+    transition: box-shadow, background-color 0.5s ease-in-out; 
+    transition: color 0.6s ease-in-out; 
+}
+.create-btn:hover,
+.create-btn:active{
+    cursor:pointer;
+    box-shadow: inset 0px 0px 0px 2px #0984e3;
+    color: #0984e3;
+    background-color: #fff;
+}
+#gas-station-label{
+    padding-top:2rem;
+}
+/* COPYRIGHT TEXT */
+.copyright{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 0.5rem;
+}
+.copyright small{
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    text-transform: uppercase;
+}

@@ -14,6 +14,7 @@ return new class extends Migration {
             $table->string('model', 50);
             $table->unsignedSmallInteger('year');
             $table->string('license_plate', 20)->unique()->nullable();
+            $table->unsignedInteger('odometer')->default(0);
             $table->enum('fuel_type', ['petrol', 'diesel', 'electric', 'hybrid']);
 
             $table->timestamp('created_at')->useCurrent();
